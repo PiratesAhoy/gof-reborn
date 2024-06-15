@@ -1,4 +1,4 @@
-#include "DIALOGS\russian\Common_Duel.c" //navy
+#include "DIALOGS\Common_Duel.c" //navy
 #include "DIALOGS\Common_rumours.c"  //homo 25/06/06
 #include "TEXT\DIALOGS\Habitue_dialog.h"
 void ProcessDialogEvent()

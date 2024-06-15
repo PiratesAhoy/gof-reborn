@@ -1,5 +1,5 @@
 //navy
-#include "DIALOGS\russian\Common_Duel.c" 
+#include "DIALOGS\Common_Duel.c" 
 #include "TEXT\DIALOGS\Enc_Treasure_dialog.h"
 void ProcessDialogEvent()
 {
