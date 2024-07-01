@@ -2001,6 +2001,143 @@ Islands[n].visible = true;
 
 		SendMessage(&locator,"le",LM_LOCATE_I,&Islands[n]);
 		
+		
+		// ==================================================================================================
+	// Petit Tabac
+		n = n + 1;
+		Islands[n].id = "Battle_Rocks";
+		Islands[n].model = "Dominica";
+		Islands[n].filespath.models = "islands\Dominica";
+		Islands[n].refl_model = "dominica_refl";
+		Islands[n].locators = "dominica_locators";
+		Islands[n].visible = false;
+
+		Islands[n].reload.l1.label = "Devil Creek";
+		Islands[n].reload.l1.name = "reload_2";
+		Islands[n].reload.l1.go = "Devil_Creek";
+		Islands[n].reload.l1.emerge = "see";
+		Islands[n].reload.l1.radius = 200.0;
+		Islands[n].reload.l1.tex = "t1";
+		Islands[n].reload.l1.enable = false;
+
+		Islands[n].InterfaceTextures.t1 = "battle_interface\moor_7.tga";
+		Islands[n].InterfaceTextures.t1.h = 4;
+		Islands[n].InterfaceTextures.t1.v = 1;
+
+		SendMessage(&locator,"le",LM_LOCATE_I,&Islands[n]);
+
+		// ==================================================================================================
+	// Isla Mona
+		n = n + 1;
+		Islands[n].id = "IslaMona";
+		Islands[n].model = "islamona";
+		Islands[n].filespath.models = "islands\IslaDeMuerte";
+		Islands[n].refl_model = "islamona_refl";
+		Islands[n].locators = "islamona_locators";
+		Islands[n].visible = false;
+
+		Islands[n].reload.l1.label = "Isla Mona Shore";
+		Islands[n].reload.l1.name = "reload_1";
+		Islands[n].reload.l1.go = "IslaMona_port";
+		Islands[n].reload.l1.emerge = "Reload3";
+		Islands[n].reload.l1.radius = 200.0;
+		Islands[n].reload.l1.enable = false;
+		Islands[n].reload.l1.tex = "t1";
+
+		Islands[n].InterfaceTextures.t1 = "battle_interface\moor_7.tga";
+		Islands[n].InterfaceTextures.t1.h = 4;
+		Islands[n].InterfaceTextures.t1.v = 1;
+
+		SendMessage(&locator,"le",LM_LOCATE_I,&Islands[n]);
+		
+		
+		// ==================================================================================================
+	// Isla de Muerte
+		n = n + 1;
+		Islands[n].id = "IslaDeMuerte";
+		Islands[n].model = "islamona";
+		Islands[n].filespath.models = "islands\IslaDeMuerte";
+		Islands[n].refl_model = "islamona_refl";
+		Islands[n].locators = "islamona_locators";
+		Islands[n].reload_enable = false;
+		Islands[n].visible = false;
+
+		Islands[n].reload.l1.label = "Deserted shore";
+		Islands[n].reload.l1.name = "reload_1";
+		Islands[n].reload.l1.go = "IslaDeMuerte_shore_01";
+		Islands[n].reload.l1.emerge = "reload1";
+		Islands[n].reload.l1.radius = 200.0;
+		Islands[n].reload.l1.tex = "t1";
+
+		Islands[n].reload.l2.label = "Dead Man's Bay";
+		Islands[n].reload.l2.name = "reload_2";
+		Islands[n].reload.l2.go = "IslaDeMuerte_shore_02";
+		Islands[n].reload.l2.emerge = "sea_back";
+		Islands[n].reload.l2.radius = 200.0;
+		Islands[n].reload.l2.tex = "t1";
+
+		Islands[n].reload.l3.label = "Witch's Rock";
+		Islands[n].reload.l3.name = "reload_3";
+		Islands[n].reload.l3.go = "IslaDeMuerte_shore_03";
+		Islands[n].reload.l3.emerge = "reload1";
+		Islands[n].reload.l3.radius = 200.0;
+		Islands[n].reload.l3.tex = "t1";
+
+	Islands[n].InterfaceTextures.t1 = "battle_interface\moor_7.tga";
+		Islands[n].InterfaceTextures.t1.h = 4;
+		Islands[n].InterfaceTextures.t1.v = 1;
+
+		SendMessage(&locator,"le",LM_LOCATE_I,&Islands[n]);
+		
+		/////////////////////////////////////////////////////////////////////////
+	/// StKitts
+	/////////////////////////////////////////////////////////////////////////
+		n = n + 1;
+		Islands[n].id = "StKitts";
+		Islands[n].model = "StKitts";
+		Islands[n].filespath.models = "islands\StKitts";
+		Islands[n].refl_model = "StKitts_refl";
+		Islands[n].locators = "StKitts_locators";
+		Islands[n].visible = true;
+		Islands[n].net = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		//Islands[n].ImmersionDistance = 4000;
+		//Islands[n].ImmersionDepth = 250;
+		Islands[n].TexturePath = "StKitts";
+
+		Islands[n].reload.l1.label = "StKitts Port";
+		Islands[n].reload.l1.name = "Reload_1";
+		Islands[n].reload.l1.go = "StKitts_town";
+		Islands[n].reload.l1.emerge = "reload1";
+		Islands[n].reload.l1.radius = 600.0;
+		Islands[n].reload.l1.tex = "t1";
+		Islands[n].reload.l1.istown = true;
+
+		Islands[n].reload.l2.label = "StKitts Fort";
+		Islands[n].reload.l2.name = "Reload_fort1";
+		Islands[n].reload.l2.go = "StKitts_fort";
+		Islands[n].reload.l2.GoAfterBoard.location = "reload_1";
+		Islands[n].reload.l2.emerge = "see";
+		Islands[n].reload.l2.radius = 600.0;
+		Islands[n].reload.l2.fortname = "fort_StKitts";
+		Islands[n].reload.l2.colonyname = "StKitts";
+		Islands[n].reload.l2.fort.model = "StKitts_fort1";
+		Islands[n].reload.l2.fort.locators = "StKitts_fort1_locators";
+		Islands[n].reload.l2.tex = "t1";
+
+		Islands[n].reload.l3.label = "Shore_15";
+		Islands[n].reload.l3.name = "Reload_3";
+		Islands[n].reload.l3.go = "StKitts_shore_1";
+		Islands[n].reload.l3.emerge = "reload1";
+		Islands[n].reload.l3.radius = 600.0;
+		Islands[n].reload.l3.tex = "t1";
+
+		Islands[n].InterfaceTextures.t1 = "battle_interface\moor_7.tga";
+		Islands[n].InterfaceTextures.t1.h = 4;
+		Islands[n].InterfaceTextures.t1.v = 1;
+
+		SendMessage(&locator,"le",LM_LOCATE_I,&Islands[n]);
+		
 iNumIslands = n;
 		Trace("How islands = " + iNumIslands);
 		/////////////////////////////////////////////////////////////////////////////////////////
