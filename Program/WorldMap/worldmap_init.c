@@ -86,11 +86,6 @@ void wdmInitWorldMap()
 	worldMap.labels.Barbados.locator = "Barbados";
 	worldMap.labels.Barbados.text = CheckingTranslate(idLngFile,"Barbados");
 	
-	worldMap.labels.Eleuthera.type = "Island";
-	worldMap.labels.Eleuthera.id = "Eleuth";
-	worldMap.labels.Eleuthera.locator = "Eleuthera";
-	worldMap.labels.Eleuthera.text = CheckingTranslate(idLngFile,"Eleuthera");
-	
 	worldMap.labels.Antigua.type = "Island";
 	worldMap.labels.Antigua.id = "Antigua";
 	worldMap.labels.Antigua.locator = "Antigua";
@@ -225,6 +220,41 @@ void wdmInitWorldMap()
 	worldMap.labels.Tenotchitlan.id = "Tenotchitlan";
 	worldMap.labels.Tenotchitlan.locator = "Tenotchitlan";
 	worldMap.labels.Tenotchitlan.text = CheckingTranslate(idLngFile,"Tenotchitlan");
+	
+	worldMap.labels.Eleuthera.type = "Island";
+	worldMap.labels.Eleuthera.id = "Eleuth";
+	worldMap.labels.Eleuthera.locator = "Eleuthera";
+	worldMap.labels.Eleuthera.text = CheckingTranslate(idLngFile,"Eleuthera");
+	
+	worldMap.labels.KhaelRoa.type = "Island";
+	worldMap.labels.KhaelRoa.id = "KhaelRoa";
+	worldMap.labels.KhaelRoa.locator = "KhaelRoa";
+	worldMap.labels.KhaelRoa.text = CheckingTranslate(idLngFile,"Khael Roa");
+	
+	worldMap.labels.StKitts.type = "Island";
+	worldMap.labels.StKitts.id = "Island StKitts";
+	worldMap.labels.StKitts.locator = "StKitts";
+	worldMap.labels.StKitts.text = CheckingTranslate(idLngFile,"StKitts");
+	
+	worldMap.labels.Aruba.type = "Island";
+	worldMap.labels.Aruba.id = "Aruba";
+	worldMap.labels.Aruba.locator = "Aruba";
+	worldMap.labels.Aruba.text = CheckingTranslate(idLngFile,"Aruba");
+	
+	worldMap.labels.Douwesen.type = "Island";
+	worldMap.labels.Douwesen.id = "Bonaire";
+	worldMap.labels.Douwesen.locator = "Douwesen";
+	worldMap.labels.Douwesen.text = CheckingTranslate(idLngFile,"Douwesen");
+	
+	worldMap.labels.Battle_Rocks.type = "Island";
+	worldMap.labels.Battle_Rocks.id = "Battle_Rocks";
+	worldMap.labels.Battle_Rocks.locator = "Battle_Rocks";
+	worldMap.labels.Battle_Rocks.text = CheckingTranslate(idLngFile,"Petit Tabac");
+	
+	worldMap.labels.IslaMona.type = "Island";
+	worldMap.labels.IslaMona.id = "IslaMona";
+	worldMap.labels.IslaMona.locator = "IslaMona";
+	worldMap.labels.IslaMona.text = CheckingTranslate(idLngFile,"Isla Mona");
 
 	//-------  TOWN ----------------------------------------------------
 	
@@ -1165,6 +1195,27 @@ void wdmInitWorldMap()
 	worldMap.islands.SantaCatalina.Shore54.position.z = -484.106;
 	worldMap.islands.SantaCatalina.Shore55.position.x = -736.763;
 	worldMap.islands.SantaCatalina.Shore55.position.z = -756.295;
+	
+	worldMap.islands.Eleuthera.position.x = -31.8557;
+	worldMap.islands.Eleuthera.position.z = 938.472;
+	
+	worldMap.islands.KhaelRoa.position.x = -830.6093;
+	worldMap.islands.KhaelRoa.position.z = 370.2058;
+	
+	worldMap.islands.StKitts.position.x = 654.3564;
+	worldMap.islands.StKitts.position.z = 272.9586;
+	
+	worldMap.islands.Aruba.position.x = 162.2475;
+	worldMap.islands.Aruba.position.z = -581.9412;
+	
+	worldMap.islands.Douwesen.position.x = 663.7469;
+	worldMap.islands.Douwesen.position.z = -752.8892;
+	
+	worldMap.islands.Battle_Rocks.position.x = 917.1944;
+	worldMap.islands.Battle_Rocks.position.z = -618.1356;
+	
+	worldMap.islands.IslaMona.position.x = 309.5177;  // East  = +, West  = -
+	worldMap.islands.IslaMona.position.z = 392.258;   // North = -, South = +
 
 	worldMap.islands.LostShipsCity.position.x = -938.667;
 	worldMap.islands.LostShipsCity.position.z = 938.654;

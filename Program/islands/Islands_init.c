@@ -27,13 +27,13 @@ void InitIslands()
 		CreateEntity(&locator,"locator");
 		n = 0;
 	// Falaise de fleur
- Islands[n].id = "FalaiseDeFleur";
+		Islands[n].id = "FalaiseDeFleur";
 		Islands[n].model = "FalaiseDeFleur";
 		Islands[n].filespath.models = "islands\FalaiseDeFleur";
 		Islands[n].refl_model = "FalaiseDeFleur_refl";
 		Islands[n].locators = "FalaiseDeFleur_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -391,13 +391,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Douwesen
 		n = n + 1;
- Islands[n].id = "Douwesen";
+		Islands[n].id = "Douwesen";
 		Islands[n].model = "Douwesen";
 		Islands[n].filespath.models = "islands\Douwesen";
 		Islands[n].refl_model = "Douwesen_refl";
 		Islands[n].locators = "Douwesen_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -461,13 +461,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Quebradas
 		n = n + 1;
- Islands[n].id = "QuebradasCostillas";
+		Islands[n].id = "QuebradasCostillas";
 		Islands[n].model = "QuebradasCostillas";
 		Islands[n].filespath.models = "islands\QuebradasCostillas";
 		Islands[n].refl_model = "QuebradasCostillas_refl";
 		Islands[n].locators = "QuebradasCostillas_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true; // KK
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true; // KK
 		// NK -->
 		// NK <--
 
@@ -528,7 +528,7 @@ Islands[n].visible = true; // KK
 	// ==================================================================================================
 	// Khael Roa
 		n = n + 1;
- Islands[n].id = "KhaelRoa";
+		Islands[n].id = "KhaelRoa";
 		Islands[n].model = "KhaelRoa";
 		Islands[n].filespath.models = "islands\KhaelRoa";
 		Islands[n].refl_model = "KhaelRoa_refl";
@@ -553,13 +553,13 @@ Islands[n].visible = true; // KK
 	// ==================================================================================================
 	// Cayman
 		n = n + 1;
- Islands[n].id = "Cayman";
+		Islands[n].id = "Cayman";
 		Islands[n].model = "Cayman";
 		Islands[n].filespath.models = "islands\Cayman";
 		Islands[n].refl_model = "Cayman_refl";
 		Islands[n].locators = "Cayman_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -630,13 +630,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Hispaniola (Gaity)
 		n = n + 1;
- Islands[n].id = "Hispaniola";
+		Islands[n].id = "Hispaniola";
 		Islands[n].model = "Gaity";
 		Islands[n].filespath.models = "islands\Gaity";
 		Islands[n].refl_model = "Gaity_refl";
 		Islands[n].locators = "Gaity_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -749,13 +749,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Cuba
 		n = n + 1;
- Islands[n].id = "Cuba";
+		Islands[n].id = "Cuba";
 		Islands[n].model = "Cuba";
 		Islands[n].filespath.models = "islands\Cuba";
 		Islands[n].refl_model = "Cuba_refl";
 		Islands[n].locators = "Cuba_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -864,13 +864,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Guadeloupe
 		n = n + 1;
- Islands[n].id = "Guadeloupe";
+		Islands[n].id = "Guadeloupe";
 		Islands[n].model = "Guadelupa";
 		Islands[n].filespath.models = "islands\Guadelupa";
 		Islands[n].refl_model = "Guadelupa_refl";
 		Islands[n].locators = "Guadelupa_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -1222,13 +1222,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Eleuthera
 		n = n + 1;
- Islands[n].id = "Eleuthera";
+		Islands[n].id = "Eleuthera";
 		Islands[n].model = "Eleuthera";
 		Islands[n].filespath.models = "islands\Eleuthera";
 		Islands[n].refl_model = "Eleuthera_refl";
 		Islands[n].locators = "Eleuthera_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
@@ -1294,13 +1294,13 @@ Islands[n].visible = true;
 	// ==================================================================================================
 	// Aruba
 		n = n + 1;
- Islands[n].id = "Aruba";
+		Islands[n].id = "Aruba";
 		Islands[n].model = "Aruba";
 		Islands[n].filespath.models = "islands\Aruba";
 		Islands[n].refl_model = "Aruba_refl";
 		Islands[n].locators = "Aruba_locators";
-Islands[n].LoadGroup.g1 = "IslandShips1";
-Islands[n].visible = true;
+		Islands[n].LoadGroup.g1 = "IslandShips1";
+		Islands[n].visible = true;
 		// NK -->
 		// NK <--
 
