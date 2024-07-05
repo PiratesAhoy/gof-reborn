@@ -450,17 +450,15 @@ int GetBortCannonsMaxQty(aref chr, string  sType)
 
 	return iCannons;
 }
-
-///////////////////////  ВЕРФИ //////////////////////
 void SetShipyardStore(ref NPChar)
 {
     int    iTest_ship, i;
 	string attrName;
-	
-	if (CheckAttribute(NPChar, "shipyard")) return; // еще есть корабли с того раза
-	
-	SaveCurrentNpcQuestDateParam(npchar, "shipyardDate"); // дата заполнения верфи
-    
+
+	if (CheckAttribute(NPChar, "shipyard")) return;
+
+	SaveCurrentNpcQuestDateParam(npchar, "shipyardDate");
+
     if (bBettaTestMode)
     {
         for (i = 1; i <=SHIP_TYPES_QUANTITY; i++)
@@ -468,103 +466,582 @@ void SetShipyardStore(ref NPChar)
             attrName = "ship" + i;
             FillShipParamShipyard(NPChar, GenerateStoreShip(i-1), attrName);
         }
-        
+
         return;
     }
-    
     FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_TARTANE), "ship1");
-    
-	iTest_ship = rand(2);
-	if (iTest_ship == 1)
+
+	iTest_ship = rand(5);
+	switch(iTest_ship) {
+	case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WAR_TARTANE), "ship2"); break;
+	case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GUNBOAT), "ship2"); break;
+	case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BERMSLOOP), "ship2"); break;
+	case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HANNAH), "ship2"); break;
+    case 5:  FillShipParamShipyard(NPChar,GenerateStoreShip(SHIP_LYON), "ship2"); break;
+    }
+	iTest_ship = rand(6);
+	switch(iTest_ship) {
+	case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BERMSLOOP), "ship3"); break;
+	case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HANNAH), "ship3"); break;
+	case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_KETCH), "ship3"); break;
+	case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BOUNTY), "ship3"); break;
+    case 5:  FillShipParamShipyard(NPChar,GenerateStoreShip(SHIP_LYON), "ship3"); break;
+    case 6:  FillShipParamShipyard(NPChar,GenerateStoreShip(SHIP_CASTELF), "ship3"); break;
+    }
+	if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
 	{
-		FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WAR_TARTANE), "ship2");
+		iTest_ship = rand(12);
+		switch(iTest_ship) {
+		case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_KETCH), "ship4"); break;
+		case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BOUNTY), "ship4"); break;
+		case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_EDINBURG), "ship4"); break;
+		case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CUTTER), "ship4"); break;
+		case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGERVML), "ship4"); break;
+		case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship4"); break;
+		case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYON), "ship4"); break;
+		case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINK), "ship4"); break;
+		case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER_H), "ship4"); break;
+		case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEOTH_H), "ship4"); break;
+		case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVELR), "ship4"); break;
+        case 12:  FillShipParamShipyard(NPChar,GenerateStoreShip(SHIP_CASTELF), "ship4"); break;
+        }
 	}
-	if (iTest_ship == 2)
+	else // = If Realistic SHIP PURCHASE IS enabled
 	{
-		FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship2");
+		iTest_ship = rand(6);
+		switch(iTest_ship) {
+		case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_KETCH), "ship4"); break;
+		case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BOUNTY), "ship4"); break;
+		case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CUTTER), "ship4"); break;
+		case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_EDINBURG), "ship4"); break;
+        case 5:  FillShipParamShipyard(NPChar,GenerateStoreShip(SHIP_LYON), "ship4"); break;
+        case 6:  FillShipParamShipyard(NPChar,GenerateStoreShip(SHIP_CASTELF), "ship4"); break;
+        }
 	}
-
-	iTest_ship = rand(2);
-	if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship3");
-	if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOP), "ship3");
-
-	iTest_ship = rand(3);
-	if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOP), "ship4");
-	if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship4");
-
-    if (sti(PChar.rank) > 1)
-    {
-		iTest_ship = rand(4);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER), "ship5");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE), "ship5");
-	
-		iTest_ship = rand(4);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER), "ship6");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE), "ship6");
+	if (sti(PChar.rank) > 1)
+	{
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(28); //50% chance to get a ship here
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship5"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYON), "ship5"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINK), "ship5"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER_H), "ship5"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEOTH_H), "ship5"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOP), "ship5"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_YACHT), "ship5"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SPEEDY), "ship5"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE), "ship5"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship5"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SHNYAVA), "ship5"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER), "ship5"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC), "ship5"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIGANTINE), "ship5"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship5"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVELR), "ship5"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(10); //50%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CUTTER), "ship5"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_EDINBURG), "ship5"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship5"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYON), "ship5"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGERVML), "ship5"); break;
+            case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship5"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(46); //50%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE), "ship6"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HEBEK), "ship6"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SHNYAVA), "ship6"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER), "ship6"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC), "ship6"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIGANTINE), "ship6"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship6"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG), "ship6"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARKENTINE), "ship6"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_INTERCEPTOR), "ship6"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT), "ship6"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship6"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_20_GUN1_18), "ship6"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE), "ship6"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SOPHIE), "ship6"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_L), "ship6"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HOOKER1), "ship6"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_N1), "ship6"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_USS_ENTERPRISE), "ship6"); break;
+			case 20:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HANNAH_P), "ship6"); break;
+			case 21:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBECLIGHT), "ship6"); break;
+			case 22:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE_L), "ship6"); break;
+			case 23:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER_L), "ship6"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(10); //50%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER), "ship6"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYON), "ship6"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGERVML), "ship6"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER_H), "ship6"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINK), "ship6"); break;
+            case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship6"); break;
+            case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship6"); break;
+			}
+		}
 	}
 	if (sti(PChar.rank) > 3)
-    {
-		iTest_ship = rand(6);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL), "ship8");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL), "ship8");
-	
-		iTest_ship = rand(6);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT), "ship9");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL), "ship9");
-	
-		iTest_ship = rand(6);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT), "ship10");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL), "ship10");
+	{
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(60); //33% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_20_GUN1_18), "ship8"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE), "ship8"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SOPHIE), "ship8"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_L), "ship8"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HOOKER1), "ship8"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_N1), "ship8"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_USS_ENTERPRISE), "ship8"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HANNAH_P), "ship8"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBECLIGHT), "ship8"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE_L), "ship8"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER_L), "ship8"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship8"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC_FRANCE), "ship8"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT4_50), "ship8"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PO_FLEUT50), "ship8"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG3), "ship8"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PACKET_BRIG), "ship8"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENTERPRISE), "ship8"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship8"); break;
+			case 20:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COLONIALSCHOONER), "ship8"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(12); //33% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LUGGER_H), "ship8"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINK), "ship8"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEOTH_H), "ship8"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOP), "ship8"); break;
+            case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYON), "ship8"); break;
+            case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship8"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(48); //33% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship9"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC_FRANCE), "ship9"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT4_50), "ship9"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PO_FLEUT50), "ship9"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG3), "ship9"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PACKET_BRIG), "ship9"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENTERPRISE), "ship9"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOPOFWAR), "ship9"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE3_50), "ship9"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL), "ship9"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL2), "ship9"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBECAS), "ship9"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE11), "ship9"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship9"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLECORVETTE), "ship9"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COLONIALSCHOONER), "ship9"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(12); //33% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEOTH_H), "ship9"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOP), "ship9"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_YACHT), "ship9"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SPEEDY), "ship9"); break;
+            case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship9"); break;
+            case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship9"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(48); //33% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENTERPRISE), "ship10"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOPOFWAR), "ship10"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE3_50), "ship10"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL), "ship10"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CARAVEL2), "ship10"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship10"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE11), "ship10"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BLACKANGEL), "ship10"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLECORVETTE), "ship10"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATAVIA2), "ship10"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CRIMSONBLOOD), "ship10"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATAVIA), "ship10"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVFRIG2_50), "ship10"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GREYHOUND), "ship10"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE_L), "ship10"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FELIPE), "ship10"); break;
+            case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship10"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(12); //33% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_YACHT), "ship10"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SPEEDY), "ship10"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE), "ship10"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBECLIGHT), "ship10"); break;
+            case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship10"); break;
+			}
+		}
 	}
 	if (sti(PChar.rank) > 5)
-    {
-		iTest_ship = rand(8);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG), "ship11");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT), "ship11");
-	
-		iTest_ship = rand(8);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG), "ship12");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_L), "ship12");
-	
-		iTest_ship = rand(8);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG), "ship13");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_L), "ship13");
-    }
-    if (sti(PChar.rank) > 8)
-    {
-		iTest_ship = rand(50);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_L), "ship14");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVETTE), "ship14");
-	
-		iTest_ship = rand(70);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_H), "ship15");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE), "ship15");
-    }
-    
-    if (sti(PChar.rank) > 12)
-    {
-		iTest_ship = rand(50);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE), "ship141");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVETTE), "ship141");
-	
-		iTest_ship = rand(70);
-		if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE), "ship151");
-		if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE), "ship151");
-		if (iTest_ship == 3) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_H), "ship151");
-    }
-    
-    if (sti(PChar.rank) > 18)
-    {
-       iTest_ship = rand(120);
-	   if (iTest_ship == 1)   FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP), "ship16");
-       if (iTest_ship == 2)   FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARSHIP), "ship16");
-       if (iTest_ship == 3)   FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP), "ship16");
-
-	   iTest_ship = rand(120);
-	   if (iTest_ship == 1) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP), "ship17");
-	   if (iTest_ship == 2) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARSHIP), "ship17");
-       if (iTest_ship == 3) FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP), "ship17");
-    }
+	{
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(88); //20% chance of a ship here
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLECORVETTE), "ship11"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATAVIA2), "ship11"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CRIMSONBLOOD), "ship11"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATAVIA), "ship11"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVFRIG2_50), "ship11"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GREYHOUND), "ship11"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE_L), "ship11"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FELIPE), "ship11"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLEFRIGATE), "ship11"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVETTE5), "ship11"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT2), "ship11"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE2), "ship11"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_THEBLACKPEARL), "ship11"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_QueenAnnesRevenge), "ship11"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BLACKPEARL), "ship11"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_Revenge), "ship11"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_30GunFrigate), "ship11"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SURPRISE), "ship11"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_28GUNFRIGATE), "ship11"); break;
+			case 20:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVETTE), "ship11"); break;
+			case 21:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_RaaFrigate), "ship11"); break;
+			case 22:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_32GunFrigate), "ship11"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(20); //20%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship11"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBECLIGHT), "ship11"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SHNYAVA), "ship11"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER), "ship11"); break;
+            case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship11"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP purchase is NOT enabled
+		{
+			iTest_ship = rand(100);  //20%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLEFRIGATE), "ship12"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVETTE5), "ship12"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUT2), "ship12"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE2), "ship12"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_THEBLACKPEARL), "ship12"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_QueenAnnesRevenge), "ship11"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BLACKPEARL), "ship12"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_Revenge), "ship12"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_30GunFrigate), "ship12"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SURPRISE), "ship12"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_28GUNFRIGATE), "ship12"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CORVETTE), "ship12"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYDIA), "ship12"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_JAMAICASHIP), "ship12"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NIGHTMARE), "ship12"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COLONIALFRIGATE), "ship12"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BOUSSOLE), "ship12"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LIGHTFRIGATE), "ship12"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_H), "ship12"); break;
+			case 20:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_RaaFrigate), "ship12"); break;
+			case 21:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_32GunFrigate), "ship12"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(20); //20%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SHNYAVA), "ship12"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER), "ship12"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC), "ship12"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIGANTINE), "ship12"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship12"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(95); //20% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LYDIA), "ship13"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_JAMAICASHIP), "ship13"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_Revenge), "ship13"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COLONIALFRIGATE), "ship13"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BOUSSOLE), "ship13"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LIGHTFRIGATE), "ship13"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINEFRIGATE), "ship13"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON_H), "ship13"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FASTGALLEON1), "ship13"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MERMAIDGRIEF), "ship13"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FEARLESS), "ship13"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE_SAT), "ship13"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE), "ship13"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SALAMANDER), "ship13"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUTOFWAR34G), "ship13"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON1), "ship13"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_INDIAMAN), "ship13"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SIRIUS1), "ship13"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_UNICORN), "ship13"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(20); //20%
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC), "ship13"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIGANTINE), "ship13"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship13"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG), "ship13"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARKENTINE), "ship13"); break;
+            case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship13"); break;
+			}
+		}
+	}
+	if (sti(PChar.rank) > 8)
+	{
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(525); //4% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP), "ship14"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP2), "ship14"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE_SAT), "ship14"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FRIGATE), "ship14"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_Revenge), "ship14"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FLEUTOFWAR34G), "ship14"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON1), "ship14"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_INDIAMAN), "ship14"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SIRIUS1), "ship14"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON), "ship14"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_AMSTERDAM), "ship14"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MORDAUNT), "ship14"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WAR_PINNACE), "ship14"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHPINNACE), "ship14"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_TWODECKER1_47), "ship14"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNE), "ship14"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LA_LICORNE), "ship14"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP5), "ship14"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_UNICORN), "ship14"); break;
+			case 20:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINEFRIGATE), "ship14"); break;
+			case 21:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP47), "ship14"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(100); //4% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG), "ship14"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARKENTINE), "ship14"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship14"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLEXEBEC), "ship14"); break;
+            case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship14"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(700); // 2.8% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SIRIUS1), "ship15"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_GALEON), "ship15"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_AMSTERDAM), "ship15"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MORDAUNT), "ship15"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WAR_PINNACE), "ship15"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHPINNACE), "ship15"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_TWODECKER1_47), "ship15"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNE), "ship15"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LA_LICORNE), "ship15"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP47), "ship15"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP5), "ship15"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP), "ship15"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARGALLEON2), "ship15"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP2), "ship15"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_RN_BATTLEFRIGATE), "ship15"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP), "ship15"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIPHEAVY), "ship15"); break;
+			case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARSHIP), "ship15"); break;
+			case 19:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COURONNE), "ship15"); break;
+			case 20:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHSHIP), "ship15"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(140); //2.8% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_INTERCEPTOR), "ship15"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLEXEBEC), "ship15"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_20_GUN1_18), "ship15"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SOPHIE), "ship15"); break;
+            case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship15"); break;
+			}
+		}
+	}
+	if (sti(PChar.rank) > 12)
+	{
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(425); //4% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP5), "ship141"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINESHIP), "ship141"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARGALLEON2), "ship141"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP2), "ship141"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_RN_BATTLEFRIGATE), "ship141"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP), "ship141"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINEFRIGATE), "ship141"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARSHIP), "ship141"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COURONNE), "ship141"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHSHIP), "ship141"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENDEAVOUR), "ship141"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SEVENPROVINCIEN), "ship141"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HEAVYWARSHIP), "ship141"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP), "ship141"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BELLONA), "ship141"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_POSEIDON), "ship141"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MORDAUNT), "ship141"); break;
+            case 18:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_Revenge), "ship141"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(175); //4% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_20_GUN1_18), "ship141"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SOPHIE), "ship141"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HOOKER1), "ship141"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_N1), "ship141"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE_L), "ship141"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER_L), "ship141"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship141"); break;
+            case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship141"); break;
+			}
+        }
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(595); //2.8% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINEFRIGATE), "ship151"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_WARSHIP), "ship151"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COURONNE), "ship151"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHSHIP), "ship151"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENDEAVOUR), "ship151"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP), "ship151"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HEAVYWARSHIP), "ship151"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP), "ship151"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BELLONA), "ship151"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_POSEIDON), "ship151"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_DUTCHLINESHIP2), "ship151"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MORDAUNT), "ship151"); break;
+			case 13:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_INTREPIDE), "ship151"); break;
+			case 14:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FR_SUPERIORWARSHIP1), "ship151"); break;
+			case 15:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP1), "ship151"); break;
+			case 16:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SUPERBE), "ship151"); break;
+			case 17:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINK), "ship151"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(280); //2.8% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship151"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG_N1), "ship151"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_USS_ENTERPRISE), "ship151"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HANNAH_P), "ship151"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BARQUE_L), "ship151"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SCHOONER_L), "ship151"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_CASTELF), "ship151"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_COLONIALSCHOONER), "ship151"); break;
+			}
+		}
+	}
+	if (sti(PChar.rank) > 18)
+	{
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(480); //2.5% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BELLONA), "ship16"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_POSEIDON), "ship16"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PINNACE), "ship16"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MORDAUNT), "ship16"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_INTREPIDE), "ship16"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_FR_SUPERIORWARSHIP1), "ship16"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP1), "ship16"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SUPERBE), "ship16"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_LINK), "ship16"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MANOWAR_FAST), "ship16"); break;
+			case 11:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MANOWAR), "ship16"); break;
+			case 12:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLEMANOWAR), "ship16"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(280); //2.5% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_USS_ENTERPRISE), "ship16"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_HANNAH_P), "ship16"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC_FRANCE), "ship16"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG3), "ship16"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_PACKET_BRIG), "ship16"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENTERPRISE), "ship16"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship16"); break;
+			}
+		}
+		if(!REALISTIC_SHIP_PURCHASE) // = If Realistic SHIP PURCHASE is NOT enabled
+		{
+			iTest_ship = rand(400); //2.5% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLESHIP1), "ship17"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SUPERBE), "ship17"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MANOWAR_FAST), "ship17"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MANOWAR), "ship17"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BATTLEMANOWAR), "ship17"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_MANOW50_GUB), "ship17"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_VICTORY), "ship17"); break;
+			case 8:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SOLEILROYAL), "ship17"); break;
+			case 9:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ARABELLA), "ship17"); break;
+			case 10:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SanFelipe), "ship17"); break;
+			}
+		}
+		else // = If Realistic SHIP PURCHASE IS enabled
+		{
+			iTest_ship = rand(280); //2.5% chance
+			switch(iTest_ship) {
+			case 1:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBEC_FRANCE), "ship17"); break;
+			case 2:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_BRIG3), "ship17"); break;
+			case 3:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_NEPTUNUS), "ship17"); break;
+			case 4:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ENTERPRISE), "ship17"); break;
+			case 5:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_SLOOPOFWAR), "ship17"); break;
+			case 6:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_XEBECAS), "ship17"); break;
+			case 7:  FillShipParamShipyard(NPChar, GenerateStoreShip(SHIP_ARABELLA), "ship17"); break;
+			}
+		}
+	}
 }
 
 void FreeShipFromShipyard(ref NPChar)

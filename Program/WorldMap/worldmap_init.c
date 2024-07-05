@@ -86,6 +86,11 @@ void wdmInitWorldMap()
 	worldMap.labels.Barbados.locator = "Barbados";
 	worldMap.labels.Barbados.text = CheckingTranslate(idLngFile,"Barbados");
 	
+	worldMap.labels.Eleuthera.type = "Island";
+	worldMap.labels.Eleuthera.id = "Eleuth";
+	worldMap.labels.Eleuthera.locator = "Eleuthera";
+	worldMap.labels.Eleuthera.text = CheckingTranslate(idLngFile,"Eleuthera");
+	
 	worldMap.labels.Antigua.type = "Island";
 	worldMap.labels.Antigua.id = "Antigua";
 	worldMap.labels.Antigua.locator = "Antigua";

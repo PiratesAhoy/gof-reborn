@@ -18,7 +18,9 @@ int iRealYear = 0;
 int iRealMonth = 0;
 int iRealDay = 0;
 // сетевые штучки <--
-
+bool Realistic_Reloading = false;
+bool RTBL = false;
+bool REALISTIC_SHIP_PURCHASE = false;
 int iGrassQuality = 0; //0 full, 1 middle, 2 low, 3 off
 
 int iEncountersRate = 1;   // работает на карте и будет работать для скорости смены отношений и тп

@@ -1,53 +1,190 @@
-#define SAILS_COLOR_QUANTITY				8
-#define SHIP_TYPES_QUANTITY					28
-#define SHIP_TYPES_QUANTITY_WITH_FORT		30	// must be (SHIP_TYPES_QUANTITY + 1)
+/////////////////////////
+// GOF 1.2
+/////////////////////////
+// SOURCE 01.001.000
+/*
+01.001.000
+- Added ships in as per Luke and Craiggo "Work 2.2".
+*/
 
+//#20171229-02 Fix Low Quest
+#define SHIP_LOW_QUEST 42
+
+#define SAILS_COLOR_QUANTITY				10
+#define SHIP_TYPES_QUANTITY					153
+#define SHIP_TYPES_QUANTITY_WITH_FORT		154	// must be (SHIP_TYPES_QUANTITY + 1)
+
+//7
 #define SHIP_TARTANE			0
 
 #define SHIP_WAR_TARTANE		1
+#define SHIP_GUNBOAT			2
+#define SHIP_BERMSLOOP 			3
+#define SHIP_HANNAH			4
+#define SHIP_KETCH			5
+#define SHIP_BOUNTY			6
+#define SHIP_LUGGER			7
+#define SHIP_LYON			8
+#define SHIP_CARAVELR			9
 
 //6
-#define SHIP_LUGGER				2
-#define SHIP_SLOOP				3
+#define SHIP_EDINBURG			10
+#define SHIP_CUTTER			11
+#define SHIP_LUGGERVML			12
+#define SHIP_PINK			13
+#define SHIP_LUGGER_H			14
+#define SHIP_GALEOTH_H			15
+#define SHIP_SLOOP			16
+#define SHIP_YACHT			17
+#define SHIP_SPEEDY			18
+#define SHIP_SOPHIE			19
+#define SHIP_BRIG_N1			20
+#define SHIP_USS_ENTERPRISE		21
+#define SHIP_HANNAH_P			22
+#define SHIP_HEBEK			23
+#define SHIP_BARQUE			24
+#define SHIP_SCHOONER			25
+#define SHIP_XEBEC			26
+#define SHIP_BRIGANTINE			27
+#define SHIP_CASTELF			28
+#define SHIP_BRIG			29
+#define SHIP_BARKENTINE			30
+#define SHIP_INTERCEPTOR		31
+#define SHIP_FLEUT			32
+#define SHIP_BRIG_20_GUN1_18		33
+#define SHIP_PINNACE			34
+#define SHIP_GALEON_L			35
+#define SHIP_XEBECLIGHT			36
+#define SHIP_BARQUE_L			37
+#define SHIP_SCHOONER_L			38
+#define SHIP_DERFFLINGER		39
+#define SHIP_DUTCHPINNACE		40
+#define SHIP_PINNACEBERLIN		41
 
 //5
-#define SHIP_SCHOONER			4
-#define SHIP_BARQUE				5
-#define SHIP_CARAVEL			6
+#define SHIP_SHNYAVA			42
+#define SHIP_BATTLEXEBEC		43
+#define SHIP_HOOKER1			44
+#define SHIP_COLONIALSCHOONER           45
+#define SHIP_XEBEC_FRANCE		46
+#define SHIP_FLEUT4_50			47
+#define SHIP_PO_FLEUT50			48
+#define SHIP_BRIG3			49
+#define SHIP_PACKET_BRIG                50
+#define SHIP_ENTERPRISE                 51
+#define SHIP_SLOOPOFWAR			52
+#define SHIP_NEPTUNUS           53
+#define SHIP_PINNACE3_50		54
+#define SHIP_CARAVEL			55
+#define SHIP_CARAVEL2			56
+#define SHIP_XEBECAS			57
+#define SHIP_PINNACE11			58
+#define SHIP_BLACKANGEL			59
+#define SHIP_BATTLECORVETTE		60
+#define SHIP_BATAVIA2			61
+#define SHIP_CRIMSONBLOOD		62
+#define SHIP_BATAVIA			63
+#define SHIP_CORVFRIG2_50		64
+#define SHIP_GREYHOUND			65
+#define SHIP_FRIGATE_L			66
+#define SHIP_FELIPE			67
+#define SHIP_28GUNFRIGATE		68
+#define SHIP_SURPRISE			69
+#define SHIP_RaaFrigate			70
+#define SHIP_32GunFrigate		71
+#define SHIP_CORVETTE5			72
 
 //4
-#define SHIP_BARKENTINE			7
-#define SHIP_BRIGANTINE			8
-#define SHIP_FLEUT				9
-#define SHIP_BRIG				10
-#define SHIP_GALEON_L			11
+#define SHIP_FLEUT2			73
+#define SHIP_CORVETTE			74
+#define SHIP_GALEON_H21			75
+#define SHIP_BATTLEFRIGATE		76
+#define SHIP_PINNACE2			77
+#define SHIP_THEBLACKPEARL		78
+#define SHIP_BLACKPEARL			79
+#define SHIP_QueenAnnesRevenge		80
+#define SHIP_Revenge			81
+#define SHIP_30GunFrigate		82
+#define SHIP_JAMAICASHIP		83
+#define SHIP_NIGHTMARE			84
+#define SHIP_COLONIALFRIGATE		85
+#define SHIP_BOUSSOLE			86
+#define SHIP_LIGHTFRIGATE		87
+#define SHIP_GALEON_H			88
+#define SHIP_FASTGALLEON1		89
+#define SHIP_MERMAIDGRIEF		90
+#define SHIP_FRIGATE_SAT		91
+#define SHIP_FRIGATE			92
+#define SHIP_SALAMANDER			93
+#define SHIP_FLEUTOFWAR34G		94
+#define SHIP_GALEON1			95
+#define SHIP_SIRIUS1			96
+#define SHIP_UNICORN			97
+#define SHIP_LINEFRIGATE		98
+#define SHIP_MERCHANT1			99
 
 //3
-#define SHIP_CORVETTE			12
-#define SHIP_GALEON_H			13
-#define SHIP_PINNACE			14
+#define SHIP_LYDIA			100
+#define SHIP_INDIAMAN			101
+#define SHIP_FEARLESS			102
+#define SHIP_LINESHIP47			103
+#define SHIP_GALEON			104
+#define SHIP_AMSTERDAM			105
+#define SHIP_MORDAUNT			106
+#define SHIP_WAR_PINNACE		107
+#define SHIP_TWODECKER1_47		108
+#define SHIP_CONSTITUTION		109
+#define SHIP_LA_LICORNE			110
+#define SHIP_LINESHIP5			111
+#define SHIP_LINESHIP			112
+#define SHIP_WARGALLEON2		113
+#define SHIP_CURSEDDUTCHMAN		114
+#define SHIP_RN_BATTLEFRIGATE		115
+#define SHIP_DUTCHLINESHIP		116
+#define SHIP_DUTCHLINESHIP2     117
+#define SHIP_LINESHIPHEAVY		118
+#define SHIP_WARSHIP			119
+#define SHIP_COURONNE			120
+#define SHIP_DUTCHSHIP			121
+#define SHIP_WARSHIP1			122
+#define SHIP_POSEIDON			123
 
 //2
-#define SHIP_FRIGATE			15
+#define SHIP_SEVENPROVINCIEN		124
+#define SHIP_HEAVYWARSHIP		125
+#define SHIP_BATTLESHIP			126
+#define SHIP_BELLONA			127
+#define SHIP_LINEARSHIP			128
+#define SHIP_SHARK			129
+#define SHIP_FR_SUPERIORWARSHIP1	130
+#define SHIP_BATTLESHIP1		131
+#define SHIP_SUPERBE			132
+#define SHIP_LINK			133
+#define SHIP_NEPTUNE			134
 
 //1
-#define SHIP_LINESHIP			16
-#define SHIP_WARSHIP			17
-#define SHIP_BATTLESHIP			18
+#define SHIP_INTREPIDE			135
+#define SHIP_ENDEAVOUR			136
+#define SHIP_MANOWAR_FAST		137
+#define SHIP_MANOWAR			138
+#define SHIP_BATTLEMANOWAR		139
+#define SHIP_MANOW50_GUB		140
+#define SHIP_VICTORY			141
+#define SHIP_SOLEILROYAL		142
+#define SHIP_SANFELIPE			143
 
-#define SHIP_MANOWAR			19
+//Quest Ships
+#define SHIP_SOLEYRU			144
+#define SHIP_BRIGQEEN			145
+#define SHIP_BRIGSW			146
+#define SHIP_XebekVML			147
+#define SHIP_CORVETTE_QUEST		148
+#define SHIP_ARABELLA			149
+#define SHIP_FLYINGDUTCHMAN		150
 
-#define SHIP_SOLEYRU			20
-
-#define SHIP_BRIGQEEN			21
-#define SHIP_BRIGSW				22
-#define SHIP_XebekVML			23
-#define SHIP_CORVETTE_QUEST		24
-#define SHIP_ARABELLA			25
-#define SHIP_FLYINGDUTCHMAN		26
 //
-#define SHIP_BOAT               27
-#define SHIP_FORT               28
+#define SHIP_BOAT               	151
+#define SHIP_FORT               	152
 
 #define SHIP_NOTUSED			 1000
 #define SHIP_NOTUSED_TYPE_NAME	"Not Used"
@@ -57,4 +194,4 @@ object  ShipsTypes[SHIP_TYPES_QUANTITY_WITH_FORT];  // RealShips
 object	SailsColors[SAILS_COLOR_QUANTITY];
 
 
-ref GetShipByType(int iType) { return &ShipsTypes[iType]; }  // пользовать GetRealShip
+ref GetShipByType(int iType) { return &ShipsTypes[iType]; }  //GetRealShip
