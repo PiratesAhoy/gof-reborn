@@ -1,3 +1,8 @@
+/////////////////////////
+// GOF 1.2
+/////////////////////////
+
+//Saint-Ashley - Modified SpyGlasses
 
 int InitItems()
 {
@@ -19,91 +24,90 @@ int InitItems()
 		itm.useLocation = "";
 		itm.useLocator = "";
 		itm.describe = "";
-        itm.Weight = 0.0; // boal
-        itm.uniq  = false;
-        itm.price = 1;
-        itm.ItemType = "VARIETY";
+		itm.Weight = 0.0; // boal
+		itm.uniq  = false;
+		itm.price = 1;
+		itm.ItemType = "VARIETY";
 	}
 	n = 0;
-	// в начате идут все без заполнения трупов
 //==================PATENTS
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "patent_eng";
-    itm.groupID = PATENT_ITEM_TYPE;
+	itm.groupID = PATENT_ITEM_TYPE;
 	itm.name = "itmname_patent_england";
 	itm.describe = "itmdescr_patent_england";
 	itm.model = "";
-    itm.quest = "eng_flag_rise";
+	itm.quest = "eng_flag_rise";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_4";
 	itm.price = 0;
-	itm.Nation = ENGLAND; //форма солдат
-	itm.TitulCur = 1; // текущ звание
-	itm.TitulCurNext = 0; // счетчик званий
+	itm.Nation = ENGLAND;
+	itm.TitulCur = 1;
+	itm.TitulCurNext = 0;
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "patent_fra";
-    itm.groupID = PATENT_ITEM_TYPE;
+	itm.groupID = PATENT_ITEM_TYPE;
 	itm.name = "itmname_patent_france";
 	itm.describe = "itmdescr_patent_france";
 	itm.model = "";
-    itm.quest = "fra_flag_rise";
+	itm.quest = "fra_flag_rise";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_4";
 //	itm.shown = 0;
 	itm.price = 0;
-	itm.Nation = FRANCE; //форма солдат
-	itm.TitulCur = 1; // текущ звание
-	itm.TitulCurNext = 0; // счетчик званий
+	itm.Nation = FRANCE;
+	itm.TitulCur = 1;
+	itm.TitulCurNext = 0;
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "patent_spa";
-    itm.groupID = PATENT_ITEM_TYPE;
+	itm.groupID = PATENT_ITEM_TYPE;
 	itm.name = "itmname_patent_spain";
 	itm.describe = "itmdescr_patent_spain";
 	itm.model = "";
-    itm.quest = "spa_flag_rise";
+	itm.quest = "spa_flag_rise";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_4";
 //	itm.shown = 0;
 	itm.price = 0;
-	itm.Nation = SPAIN; //форма солдат
-	itm.TitulCur = 1; // текущ звание
-	itm.TitulCurNext = 0; // счетчик званий
+	itm.Nation = SPAIN;
+	itm.TitulCur = 1;
+	itm.TitulCurNext = 0;
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "patent_hol";
-    itm.groupID = PATENT_ITEM_TYPE;
+	itm.groupID = PATENT_ITEM_TYPE;
 	itm.name = "itmname_patent_holland";
 	itm.describe = "itmdescr_patent_holland";
 	itm.model = "";
-    itm.quest = "hol_flag_rise";
+	itm.quest = "hol_flag_rise";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_4";
 //	itm.shown = 0;
 	itm.price = 0;
-	itm.Nation = HOLLAND; //форма солдат
-	itm.TitulCur = 1; // текущ звание
-	itm.TitulCurNext = 0; // счетчик званий
+	itm.Nation = HOLLAND;
+	itm.TitulCur = 1;
+	itm.TitulCurNext = 0;
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
 /////////////////////////////////////////////////////////////////
-//                                     WEAPONS   выбор оружия у офицера завязан на порядковый номер в списке, а не на крутизну!!!
+//									WEAPONS
 ////////////////////////////////////////////////////////////////
-    ///////////////////////////  FencingLight   ////////////////////////////
-    makeref(itm,Items[n]);
-	itm.id = "unarmed"; // руки
+	///////////////////////////  FencingLight   ////////////////////////////
+	makeref(itm,Items[n]);
+	itm.id = "unarmed"; // ����
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_unarmed";
 	itm.describe = "itmdescr_unarmed";
@@ -125,10 +129,10 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
-    // boal 21.05.2004 -->
-    makeref(itm,Items[n]);
-	itm.id = "rabble"; // кочерга
+
+	// boal 21.05.2004 -->
+	makeref(itm,Items[n]);
+	itm.id = "rabble";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_rabble";
 	itm.describe = "itmdescr_rabble";
@@ -152,8 +156,8 @@ int InitItems()
 	n++;
 	// boal 21.05.2004 <--
 
-    /*makeref(itm,Items[n]);
-	itm.id = "Lead1"; // кастет
+	/*makeref(itm,Items[n]);
+	itm.id = "Lead1";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_lead1";
 	itm.describe = "itmdescr_lead1";
@@ -175,9 +179,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;*/
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade5";  //Кинжал
+	itm.id = "blade5";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade5";
 	itm.describe = "itmdescr_blade5";
@@ -191,7 +195,7 @@ int InitItems()
 	// boal 19.01.2004 <--
 	itm.dmg_min = 3.0;
 	itm.dmg_max = 35.0;
-	itm.piercing = 25;
+	itm.piercing = 50;
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	itm.block = 5;
@@ -202,8 +206,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade2";  //Мушкетерская рапира.   Бретта
+	makeref(itm,Items[n]);
+	itm.id = "blade2";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade2";
 	itm.describe = "itmdescr_blade2";
@@ -227,9 +231,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade6";  //Скьявона
+	itm.id = "blade6";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade6";
 	itm.describe = "itmdescr_blade6";
@@ -253,9 +257,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade9"; //Итальянская рапира
+	itm.id = "blade9";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade9";
 	itm.describe = "itmdescr_blade9";
@@ -279,9 +283,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade14";  //Французская рапира
+	itm.id = "blade14";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade14";
 	itm.describe = "itmdescr_blade14";
@@ -302,12 +306,12 @@ int InitItems()
 	itm.param.time = 0.1;
 	itm.param.colorstart = argb(64, 64, 64, 64);
 	itm.param.colorend = argb(0, 32, 32, 32);
-    itm.FencingType = "FencingLight";
-    itm.ItemType = "WEAPON";
+	itm.FencingType = "FencingLight";
+	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade19";   //Германская рапира
+	itm.id = "blade19";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade19";
 	itm.describe = "itmdescr_blade19";
@@ -331,9 +335,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade22"; //Английская рапира
+	itm.id = "blade22";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade22";
 	itm.describe = "itmdescr_blade22";
@@ -357,9 +361,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade23"; //Испанская рапира
+	itm.id = "blade23";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade23";
 	itm.describe = "itmdescr_blade23";
@@ -383,9 +387,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
-    /*makeref(itm,Items[n]);
-	itm.id = "arm1"; //Боевые когти
+
+	/*makeref(itm,Items[n]);
+	itm.id = "arm1";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_arm1";
 	itm.describe = "itmdescr_arm1";
@@ -409,9 +413,9 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;*/
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade27"; //Клинок Генри Моргана
+	itm.id = "blade27";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade27";
 	itm.describe = "itmdescr_blade27";
@@ -435,10 +439,36 @@ int InitItems()
 	itm.FencingType = "FencingLight";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
+	makeref(itm,Items[n]);
+	itm.id = "cortblade";  //Sword of Cort�s <-----Officerpuppy 12/16/09
+	itm.groupID = BLADE_ITEM_TYPE;
+	itm.name = "itmname_cortblade";
+	itm.describe = "itmdescr_cortblade";
+	itm.folder = "items";
+	itm.model = "blade27";
+	itm.picIndex = 3;
+	itm.picTexture = "ITEMS_8";
+	// boal 15.12.2009 -->
+	itm.price = 25000;
+	itm.Weight = 3.5;
+	itm.shown = 1;
+	// boal 15.12.2009 <--
+	itm.dmg_min = 30.0;
+	itm.dmg_max = 60.0;
+	itm.piercing = 90.0;
+	itm.minlevel = 1;
+	itm.rare = 0.0001;
+	itm.block = 80.0;
+	itm.param.time = 0.1;
+	itm.param.colorstart = argb(64, 64, 64, 64);
+	itm.param.colorend = argb(0, 32, 32, 32);
+	itm.FencingType = "FencingLight";
+	itm.ItemType = "WEAPON";
+	n++;
 	///////////////////////////  Fencing   ////////////////////////////
 	makeref(itm,Items[n]);
-	itm.id = "blade1"; //Старая сабля
+	itm.id = "blade1";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade1";
 	itm.describe = "itmdescr_blade1";
@@ -463,8 +493,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade4";  //Абордажная сабля
+	makeref(itm,Items[n]);
+	itm.id = "blade4";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade4";
 	itm.describe = "itmdescr_blade4";
@@ -489,8 +519,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "topor3";  //Топорик
+	makeref(itm,Items[n]);
+	itm.id = "topor3";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_topor3";
 	itm.describe = "itmdescr_topor3";
@@ -514,9 +544,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade3"; //Малкус   Стальная сабля с тяжелым лезвием, способная разрубить любую кольчугу.
+	itm.id = "blade3";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade3";
 	itm.describe = "itmdescr_blade3";
@@ -540,9 +570,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade7"; //Ятаган
+	itm.id = "blade7";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade7";
 	itm.describe = "itmdescr_blade7";
@@ -567,8 +597,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade12"; //Персидская сабля
+	makeref(itm,Items[n]);
+	itm.id = "blade12";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade12";
 	itm.describe = "itmdescr_blade12";
@@ -592,9 +622,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
-    makeref(itm,Items[n]);
-	itm.id = "blade18"; //Персидская сабля с острым изогнутым клинком, распространенная от Марокко до Индии.
+
+	makeref(itm,Items[n]);
+	itm.id = "blade18";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade18";
 	itm.describe = "itmdescr_blade18";
@@ -618,9 +648,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade30";//Жало
+	itm.id = "blade30";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade30";
 	itm.describe = "itmdescr_blade30";
@@ -644,9 +674,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade31"; //Кавказкая шашка
+	itm.id = "blade31";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade31";
 	itm.describe = "itmdescr_blade31";
@@ -670,9 +700,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade24"; //Ураган
+	itm.id = "blade24";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade24";
 	itm.describe = "itmdescr_blade24";
@@ -696,9 +726,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade25";  //Арабская сабля
+	itm.id = "blade25";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade25";
 	itm.describe = "itmdescr_blade25";
@@ -723,8 +753,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade34"; //Нимча
+	makeref(itm,Items[n]);
+	itm.id = "blade34";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade34";
 	itm.describe = "itmdescr_blade34";
@@ -748,9 +778,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
-    makeref(itm,Items[n]);
-	itm.id = "blade26";  //Цербер
+
+	makeref(itm,Items[n]);
+	itm.id = "blade26";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade26";
 	itm.describe = "itmdescr_blade26";
@@ -774,9 +804,9 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade32"; //Килидж
+	itm.id = "blade32";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade32";
 	itm.describe = "itmdescr_blade32";
@@ -788,9 +818,9 @@ int InitItems()
 	itm.price = 3000;
 	itm.Weight = 4.4;
 	// boal 19.01.2004 <--
-	itm.dmg_min = 25.0;
-	itm.dmg_max = 70.0;
-	itm.piercing = 90.0;
+	itm.dmg_min = 35.0;
+	itm.dmg_max = 80.0;
+	itm.piercing = 10.0;
 	itm.minlevel = 1;
 	itm.rare = 0.0001;
 	itm.block = 92.0;
@@ -800,10 +830,10 @@ int InitItems()
 	itm.FencingType = "Fencing";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	///////////////////////////  FencingHeavy   ////////////////////////////
 	makeref(itm,Items[n]);
-	itm.id = "blade10"; //Абордажный палаш
+	itm.id = "blade10";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade10";
 	itm.describe = "itmdescr_blade10";
@@ -828,8 +858,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade35";  //Палаш
+	makeref(itm,Items[n]);
+	itm.id = "blade35";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade35";
 	itm.describe = "itmdescr_blade35";
@@ -853,9 +883,9 @@ int InitItems()
 	itm.FencingType = "FencingHeavy";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade8";  //Мальтийский меч
+	itm.id = "blade8";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade8";
 	itm.describe = "itmdescr_blade8";
@@ -881,7 +911,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "blade11"; //Шотландский палаш
+	itm.id = "blade11";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade11";
 	itm.describe = "itmdescr_blade11";
@@ -907,7 +937,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "blade13"; //Эсток
+	itm.id = "blade13";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade13";
 	itm.describe = "itmdescr_blade13";
@@ -932,8 +962,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "topor1";  //Топор
+	makeref(itm,Items[n]);
+	itm.id = "topor1";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_topor1";
 	itm.describe = "itmdescr_topor1";
@@ -957,9 +987,9 @@ int InitItems()
 	itm.FencingType = "FencingHeavy";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade15";  //Итальянский меч
+	itm.id = "blade15";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade15";
 	itm.describe = "itmdescr_blade15";
@@ -985,7 +1015,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "blade16"; //Испанский меч
+	itm.id = "blade16";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade16";
 	itm.describe = "itmdescr_blade16";
@@ -1009,9 +1039,9 @@ int InitItems()
 	itm.FencingType = "FencingHeavy";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "blade17"; //Фламберг
+	itm.id = "blade17";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade17";
 	itm.describe = "itmdescr_blade17";
@@ -1036,8 +1066,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade20"; //Атилл
+	makeref(itm,Items[n]);
+	itm.id = "blade20";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade20";
 	itm.describe = "itmdescr_blade20";
@@ -1063,7 +1093,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "blade21"; //Фальчион
+	itm.id = "blade21";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade21";
 	itm.describe = "itmdescr_blade21";
@@ -1089,7 +1119,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "blade33"; //Французский меч
+	itm.id = "blade33";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade33";
 	itm.describe = "itmdescr_blade33";
@@ -1114,8 +1144,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "blade28";  //Танат
+	makeref(itm,Items[n]);
+	itm.id = "blade28";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_blade28";
 	itm.describe = "itmdescr_blade28";
@@ -1139,9 +1169,9 @@ int InitItems()
 	itm.FencingType = "FencingHeavy";
 	itm.ItemType = "WEAPON";
 	n++;
-	
+
 	makeref(itm,Items[n]);
-	itm.id = "topor2";  //Секира
+	itm.id = "topor2";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_topor2";
 	itm.describe = "itmdescr_topor2";
@@ -1166,6 +1196,59 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
+	makeref(itm,Items[n]);
+	itm.id = "tritblade";  //Sword of Triton  <-----Officerpuppy 05/09/11
+	itm.groupID = BLADE_ITEM_TYPE;
+	itm.name = "itmname_tritblade";
+	itm.describe = "itmdescr_tritblade";
+	itm.folder = "items";
+	itm.model = "blade30";
+	itm.picIndex = 2;
+	itm.picTexture = "ITEMS_10";
+	// boal 15.12.2009 -->
+	itm.price = 25000;
+	itm.Weight = 7.5;
+	itm.shown = 1;
+	// boal 15.12.2009 <--
+	itm.dmg_min = 30.0;
+	itm.dmg_max = 110.0;
+	itm.piercing = 75.0;
+	itm.minlevel = 1;
+	itm.rare = 0.0001;
+	itm.block = 80.0;
+	itm.param.time = 0.1;
+	itm.param.colorstart = argb(64, 64, 64, 64);
+	itm.param.colorend = argb(0, 32, 32, 32);
+   	 itm.FencingType = "FencingHeavy";
+    	itm.ItemType = "WEAPON";
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "piranblade";  //St. Piran's Blade  <-----Officerpuppy 06/15/11
+	itm.groupID = BLADE_ITEM_TYPE;
+	itm.name = "itmname_piranblade";
+	itm.describe = "itmdescr_piranblade";
+	itm.folder = "items";
+	itm.model = "blade16";
+	itm.picIndex = 9;
+	itm.picTexture = "ITEMS_3";
+	// boal 15.12.2009 -->
+	itm.price = 25000;
+	itm.Weight = 7.5;
+	itm.shown = 1;
+	// boal 15.12.2009 <--
+	itm.dmg_min = 40.0;
+	itm.dmg_max = 100.0;
+	itm.piercing = 55.0;
+	itm.minlevel = 1;
+	itm.rare = 0.0001;
+	itm.block = 80.0;
+	itm.param.time = 0.1;
+	itm.param.colorstart = argb(64, 64, 64, 64);
+	itm.param.colorend = argb(0, 32, 32, 32);
+   	 itm.FencingType = "FencingHeavy";
+    	itm.ItemType = "WEAPON";
+	n++;
 //GUNS
 
 	makeref(itm,Items[n]);
@@ -1215,7 +1298,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "pistol3"; //Мортира
+	itm.id = "pistol3";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_pistol3";
 	itm.describe = "itmdescr_pistol3";
@@ -1238,7 +1321,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "pistol6";  // 2х
+	itm.id = "pistol6";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_pistol6";
 	itm.describe = "itmdescr_pistol6";
@@ -1261,7 +1344,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "pistol5"; //Бретерский Пистолет
+	itm.id = "pistol5";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_pistol5";
 	itm.describe = "itmdescr_pistol5";
@@ -1284,7 +1367,7 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "pistol4"; // 4х
+	itm.id = "pistol4";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_pistol4";
 	itm.describe = "itmdescr_pistol4";
@@ -1307,8 +1390,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "mushket"; //Мушкетон
+	makeref(itm,Items[n]);
+	itm.id = "mushket";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_mushket";
 	itm.describe = "itmdescr_mushket";
@@ -1324,6 +1407,29 @@ int InitItems()
 	itm.chargespeed = 10;
 	itm.dmg_min = 85.0;
 	itm.dmg_max = 270.0;
+	itm.accuracy = 70;
+	itm.minlevel = 1;
+	itm.rare = 0.0001;
+	itm.ItemType = "WEAPON";
+	n++;
+
+  	makeref(itm,Items[n]);
+	itm.id = "mushket1"; //<-----Officerpuppy 02/04/10
+	itm.groupID = GUN_ITEM_TYPE;
+	itm.name = "itmname_mushket1";
+	itm.describe = "itmdescr_mushket1";
+	itm.folder = "items";
+	itm.model = "mushket1";
+	itm.picIndex = 3;
+	itm.picTexture = "ITEMS_14";
+	// boal 19.01.2004 -->
+	itm.price = 11000;
+	itm.Weight = 13;
+	// boal 19.01.2004 <--
+	itm.chargeQ = 1;
+	itm.chargespeed = 10;
+	itm.dmg_min = 80.0;
+	itm.dmg_max = 280.0;
 	itm.accuracy = 80;
 	itm.minlevel = 1;
 	itm.rare = 0.0001;
@@ -1349,7 +1455,7 @@ int InitItems()
 	itm.model = "stat1";
 	itm.picIndex = 1;
 	itm.picTexture = "ITEMS_4";
-	itm.price = 15000; // квест ростовщика и клады
+	itm.price = 15000;
 	itm.Weight = 15; // boal
 	n++;
 
@@ -1361,14 +1467,14 @@ int InitItems()
 	itm.picIndex = 15;
 	itm.picTexture = "ITEMS_4";
 //	itm.shown = 0;
-    // boal 19.01.2004 -->
+	// boal 19.01.2004 -->
 	itm.price = 1000;
 	itm.Weight = 0.1;
 	//itm.Monster.rare = 0.05;
-    //itm.Monster.min = 1;
-    //itm.Monster.max = 10;
-    // boal 19.01.2004 <--
-    itm.ItemType = "QUESTITEMS";
+	//itm.Monster.min = 1;
+	//itm.Monster.max = 10;
+	// boal 19.01.2004 <--
+	itm.ItemType = "QUESTITEMS";
 	n++;
 
 	makeref(itm,Items[n]);
@@ -1385,7 +1491,7 @@ int InitItems()
 	// boal 19.01.2004 <--
 	n++;
 
-	// boal для генератора -->
+	// boal -->
 	makeref(itm,Items[n]);
 	itm.id = "letter_1";
 	itm.name = "itmname_letter_1";
@@ -1397,7 +1503,7 @@ int InitItems()
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "letter_2";
 	itm.name = "itmname_letter_2";
@@ -1409,7 +1515,7 @@ int InitItems()
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "letter_open";
 	itm.name = "itmname_letter_open";
@@ -1422,9 +1528,9 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    // boal для генератора <--
+	// boal <--
 
-	makeref(itm,Items[n]); //записка
+	makeref(itm,Items[n]);
 	itm.id = "letter_notes";
 	itm.name = "itmname_letter_notes";
 	itm.describe = "itmdescr_letter_notes";
@@ -1436,7 +1542,7 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	makeref(itm,Items[n]); //вексель
+	makeref(itm,Items[n]);
 	itm.id = "Order";
 	itm.name = "itmname_order";
 	itm.describe = "itmdescr_order";
@@ -1457,9 +1563,9 @@ int InitItems()
 	itm.picTexture = "ITEMS_12";
 	itm.price = 0;
 	itm.Weight = 0.1;
-	n++; 
+	n++;
 
-    // eddy торговые грамоты <--
+	// eddy <--
 	makeref(itm,Items[n]);
 	itm.id = "EngTradeLicence";
 	itm.name = "itmname_EngTradeLicence";
@@ -1508,7 +1614,7 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	makeref(itm,Items[n]); //общая верительная грамота для губеров.
+	makeref(itm,Items[n]);
 	itm.id = "Trust";
 	itm.name = "itmname_Trust";
 	itm.describe = "itmdescr_Trust";
@@ -1519,9 +1625,9 @@ int InitItems()
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
-	// eddy торговые грамоты <--
+	// eddy  <--
 
-	makeref(itm,Items[n]); //секретная депеша по квесту мэра
+	makeref(itm,Items[n]);
 	itm.id = "sicretLetter";
 	itm.name = "itmname_sicretLetter";
 	itm.describe = "itmdescr_sicretLetter";
@@ -1548,9 +1654,9 @@ int InitItems()
 	itm.Weight = 0.1;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++;  
+	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "Bible";
 	itm.name = "itmname_bible";
 	itm.describe = "itmdescr_bible";
@@ -1565,11 +1671,11 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "ShipsJournal";
 	itm.name = "itmname_ShipsJournal";
 	itm.describe = "itmdescr_ShipsJournal";
-	itm.model = ""; 
+	itm.model = "";
 	itm.picIndex = 8;
 	itm.picTexture = "ITEMS_4";
 //	itm.shown = 0;
@@ -1579,9 +1685,9 @@ int InitItems()
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
 	n++;
-	
-	// ==> Предметы по квесту Аскольда
-    makeref(itm,Items[n]);
+
+	// ==>
+	makeref(itm,Items[n]);
 	itm.id = "Powder_mummie";
 	itm.name = "itmname_Powder_mummie";
 	itm.describe = "itmdescr_Powder_mummie";
@@ -1595,8 +1701,8 @@ int InitItems()
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
 	n++;
-	
-    makeref(itm,Items[n]); // Крест Антониу де Соуза
+
+	makeref(itm,Items[n]);
 	itm.id = "DeSouzaCross";
 	itm.name = "itmname_DeSouzaCross";
 	itm.describe = "itmdescr_DeSouzaCross";
@@ -1670,8 +1776,8 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "mushket2x2"; //Квестовый мушкетон, двуствольный
+	makeref(itm,Items[n]);
+	itm.id = "mushket2x2";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_questMushket";
 	itm.describe = "itmdescr_questMushket";
@@ -1693,8 +1799,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "toporAZ"; //Макуауитль
+	makeref(itm,Items[n]);
+	itm.id = "toporAZ";
 	itm.groupID = BLADE_ITEM_TYPE;
 	itm.name = "itmname_toporAZ";
 	itm.describe = "itmdescr_toporAZ";
@@ -1736,8 +1842,8 @@ int InitItems()
 	n++;
 
 	//homo
-    makeref(itm,Items[n]);
-	itm.id = "Griffins_Weapon"; // оружие Гриффина
+	makeref(itm,Items[n]);
+	itm.id = "Griffins_Weapon";
 	itm.name = "itmname_Griffins_Weapon";
 	itm.describe = "itmdescr_Griffins_Weapon";
 	itm.model = "";
@@ -1749,8 +1855,8 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 	//homo
-    makeref(itm,Items[n]);
-	itm.id = "Weapon_for_escape"; //оружие для побега Блада
+	makeref(itm,Items[n]);
+	itm.id = "Weapon_for_escape";
 	itm.name = "itmname_Weapon_for_escape";
 	itm.describe = "itmdescr_Weapon_for_escape";
 	itm.model = "";
@@ -1762,12 +1868,7 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	////////////////////////////////////////////////////////////////////////////////////////////		
-	//здесь начинаются квестовые предметы, заюзаные в локаторах item
-	//оформлять эти предметы ТОЛЬКО ЗДЕСЬ, до конца сектора квестовых предметов
-	////////////////////////////////////////////////////////////////////////////////////////////
-
-	ItemsForLocators_start = n; //начальный номер для спец. предметов
+	ItemsForLocators_start = n;
 
 	makeref(itm,Items[n]);
 	itm.id = "Rock_letter";
@@ -1776,32 +1877,32 @@ int InitItems()
 	itm.model = "StoneMap";
 	itm.picIndex = 6;
 	itm.picTexture = "ITEMS_4";
-	itm.shown = 0; //сначала скрижали невидимы, т.е. взять их нельзя до прох.квеста Аскольда.
-	string PutLocation, PutLocator;   //рендом скрижалей.
-    int WherePut = rand(4);
-    switch(WherePut)
-    {
-        case 0:
-            PutLocation = "Pearl_Grot";
-            PutLocator  = "item"+(rand(2)+1);
-        break;
-        case 1:
-            PutLocation = "Caiman_Grot";
-            PutLocator  = "item"+(rand(2)+1);
-        break;
-        case 2:
-            PutLocation = "Terks_Grot";
-            PutLocator  = "item"+(rand(2)+1);
-        break;
-        case 3:
-            PutLocation = "Dominica_Grot";
-            PutLocator  = "item"+(rand(2)+1);
-        break;
-        case 4:
-            PutLocation = "Temple";
-            PutLocator  = "item1";
-        break;
-    }
+	itm.shown = 0;
+	string PutLocation, PutLocator;
+	int WherePut = rand(4);
+	switch(WherePut)
+	{
+		case 0:
+			PutLocation = "Pearl_Grot";
+			PutLocator  = "item"+(rand(2)+1);
+		break;
+		case 1:
+			PutLocation = "Caiman_Grot";
+			PutLocator  = "item"+(rand(2)+1);
+		break;
+		case 2:
+			PutLocation = "Terks_Grot";
+			PutLocator  = "item"+(rand(2)+1);
+		break;
+		case 3:
+			PutLocation = "Dominica_Grot";
+			PutLocator  = "item"+(rand(2)+1);
+		break;
+		case 4:
+			PutLocation = "Temple";
+			PutLocator  = "item1";
+		break;
+	}
 	itm.startLocation = PutLocation;
 	itm.startLocator = PutLocator;
 	itm.useLocation = "Guadeloupe_Cave";
@@ -1811,8 +1912,8 @@ int InitItems()
 	itm.Weight = 0.2;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++;  
-	
+	n++;
+
 	makeref(itm,Items[n]);
 	itm.id = "Azzy_bottle";
 	itm.name = "itmname_Azzy_bottle";
@@ -1820,7 +1921,7 @@ int InitItems()
 	itm.model = "pursel";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_12";
-	itm.shown = 1; //до поры локатор не реагирует на заступы
+	itm.shown = 1;
 	itm.useLocator = "button01";
 	// boal 19.01.2004 -->
 	itm.Weight = 2.5;
@@ -1929,7 +2030,7 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	makeref(itm,Items[n]);  //ключ от сундука по штурму Панамы
+	makeref(itm,Items[n]);
 	itm.id = "keyPanama";
 	itm.name = "itmname_keyPanama";
 	itm.describe = "itmdescr_keyPanama";
@@ -1941,14 +2042,14 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	makeref(itm,Items[n]);  //ключ для линейки ГПК
+	makeref(itm,Items[n]);
 	itm.id = "keyQuestLSC";
 	itm.name = "itmname_keyQuestLSC";
 	itm.describe = "itmdescr_keyQuestLSC";
 	itm.model = "keymiddle";
 	itm.picIndex = 15;
 	itm.picTexture = "ITEMS_12";
-	itm.shown = 0; //сначала ключ невидим
+	itm.shown = 0;
 	itm.startLocation = "Villemstad_houseSp5";
 	itm.startLocator = "item2";
 	itm.Weight = 0.0;
@@ -1956,7 +2057,7 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	makeref(itm,Items[n]);	//письмо для линейки ГПК
+	makeref(itm,Items[n]);
 	itm.id = "letter_LSC";
 	itm.name = "itmname_letter_LSC";
 	itm.describe = "itmdescr_letter_LSC";
@@ -1967,10 +2068,10 @@ int InitItems()
 	itm.Weight = 0.1;
 	itm.ItemType = "QUESTITEMS";
 	n++;
-	
-    //homo лекарство по линейке Блада
-    makeref(itm,Items[n]);
-	itm.id = "migraine_potion"; // лекарство от Мигрени
+
+	//homo
+	makeref(itm,Items[n]);
+	itm.id = "migraine_potion";
 	itm.name = "itmname_migraine_potion";
 	itm.describe = "itmdescr_migraine_potion";
 	itm.model = "balsam";
@@ -1982,8 +2083,8 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 	//homo
-    makeref(itm,Items[n]);
-	itm.id = "MsStid_ring"; // Колечко
+	makeref(itm,Items[n]);
+	itm.id = "MsStid_ring";
 	itm.name = "itmname_MsStid_ring";
 	itm.describe = "itmdescr_MsStid_ring";
 	itm.model = "RingJew";//pursel
@@ -1995,14 +2096,14 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	makeref(itm,Items[n]);	//шестеренка
+	makeref(itm,Items[n]);
 	itm.id = "Pinion";
 	itm.name = "itmname_pinion";
 	itm.describe = "itmdescr_pinion";
 	itm.model = "Pinion";
 	itm.picIndex = 16;
 	itm.picTexture = "ITEMS_12";
-	itm.shown = 1; 
+	itm.shown = 1;
 	itm.startLocation = "UnderWater";
 	itm.startLocator = "item" + (rand(4)+1);
 	itm.price = 0;
@@ -2010,8 +2111,8 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "pistol7";  //шотган
+	makeref(itm,Items[n]);
+	itm.id = "pistol7";
 	itm.groupID = GUN_ITEM_TYPE;
 	itm.name = "itmname_pistol7";
 	itm.describe = "itmdescr_pistol7";
@@ -2021,8 +2122,7 @@ int InitItems()
 	itm.picTexture = "ITEMS_8";
 	itm.shown = 1;
 	itm.price = 25000;
-	//ложим в храм
-	itm.shown = 1; 
+	itm.shown = 1;
 	itm.startLocation = "Temple_round";
 	itm.startLocator = "item1";
 	// boal 19.01.2004 -->
@@ -2038,8 +2138,8 @@ int InitItems()
 	itm.ItemType = "WEAPON";
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "Ascold_rabble"; // монтировка
+	makeref(itm,Items[n]);
+	itm.id = "Ascold_rabble";
 	itm.name = "itmname_Ascold_rabble";
 	itm.describe = "itmdescr_Ascold_rabble";
 	itm.model = "kocherg";
@@ -2055,7 +2155,6 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	//для проверки тотемов начальный номер 
 	Totems_start = n;
 
 	makeref(itm,Items[n]);
@@ -2065,7 +2164,7 @@ int InitItems()
 	itm.model = "Totem_1";
 	itm.picIndex = 10;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Shore_ship1";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_1";
@@ -2075,7 +2174,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++;  
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_2";
@@ -2084,7 +2183,7 @@ int InitItems()
 	itm.model = "Totem_2";
 	itm.picIndex = 9;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Shore55";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_2";
@@ -2094,7 +2193,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_3";
@@ -2103,7 +2202,7 @@ int InitItems()
 	itm.model = "Totem_3";
 	itm.picIndex = 7;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Marigo_Cave";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_3";
@@ -2113,7 +2212,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_4";
@@ -2122,7 +2221,7 @@ int InitItems()
 	itm.model = "Totem_4";
 	itm.picIndex = 8;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "PortSpein_town";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_4";
@@ -2132,7 +2231,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_5";
@@ -2141,7 +2240,7 @@ int InitItems()
 	itm.model = "Totem_5";
 	itm.picIndex = 6;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "FortFrance_Dungeon";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_5";
@@ -2151,7 +2250,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_6";
@@ -2160,7 +2259,7 @@ int InitItems()
 	itm.model = "Totem_6";
 	itm.picIndex = 2;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Tortuga_town";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_6";
@@ -2170,7 +2269,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_7";
@@ -2179,7 +2278,7 @@ int InitItems()
 	itm.model = "Totem_7";
 	itm.picIndex = 1;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Villemstad_townhall";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_7";
@@ -2189,7 +2288,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_8";
@@ -2198,7 +2297,7 @@ int InitItems()
 	itm.model = "Totem_8";
 	itm.picIndex = 4;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Mayak8";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_8";
@@ -2208,7 +2307,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_9";
@@ -2217,7 +2316,7 @@ int InitItems()
 	itm.model = "Totem_9";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Santiago_Incquisitio";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_9";
@@ -2227,7 +2326,7 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
 	itm.id = "Totem_10";
@@ -2236,7 +2335,7 @@ int InitItems()
 	itm.model = "Totem_10";
 	itm.picIndex = 5;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Temple";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_10";
@@ -2249,13 +2348,13 @@ int InitItems()
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "Totem_11";	//единый тотем на снятие огня
+	itm.id = "Totem_11";
 	itm.name = "itmname_Totem_11";
 	itm.describe = "itmdescr_Totem_11";
 	itm.model = "Totem_11";
 	itm.picIndex = 11;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Tenochtitlan";
 	itm.startLocator = "item1";
 	itm.useLocation = "Tenochtitlan";
@@ -2265,16 +2364,16 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++;  
+	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "Totem_12";	//открывалка на каменный сундук с кинжалом
+	itm.id = "Totem_12";
 	itm.name = "itmname_Totem_12";
 	itm.describe = "itmdescr_Totem_12";
 	itm.model = "Totem_12";
 	itm.picIndex = 12;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = 0; 
+	itm.shown = 0;
 	itm.useLocation = "Temple_great";
 	itm.useLocator = "button01";
 	itm.price = (rand(8)+1)*1000;
@@ -2282,16 +2381,16 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "Totem_13";    //один из двух тотемов на снятие огня
+	itm.id = "Totem_13";
 	itm.name = "itmname_Totem_13";
 	itm.describe = "itmdescr_Totem_13";
 	itm.model = "Totem_13";
 	itm.picIndex = 13;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Tenotchitlan_Jungle_06";
 	itm.startLocator = "item1";
 	itm.useLocation = "Tenochtitlan";
@@ -2301,16 +2400,16 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "Totem_14";	//один из двух тотемов на снятие огня
+	itm.id = "Totem_14";
 	itm.name = "itmname_Totem_14";
 	itm.describe = "itmdescr_Totem_14";
 	itm.model = "Totem_14";
 	itm.picIndex = 14;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Panama_jungle_02";
 	itm.startLocator = "item1";
 	itm.useLocation = "Tenochtitlan";
@@ -2320,16 +2419,16 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "Totem_15";	//открывалка на второй каменный сундук
+	itm.id = "Totem_15";
 	itm.name = "itmname_Totem_15";
 	itm.describe = "itmdescr_Totem_15";
 	itm.model = "Totem_15";
 	itm.picIndex = 15;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = true; 
+	itm.shown = true;
 	itm.startLocation = "Temple_Inside";
 	itm.startLocator = "item1";
 	itm.useLocation = "Temple_great";
@@ -2339,10 +2438,9 @@ int InitItems()
 	itm.Weight = 0.3;
 	// boal 19.01.2004 <--
 	itm.ItemType = "QUESTITEMS";
-	n++; 
+	n++;
 
 	Totems_end = n;
-	//для проверки тотемов конечный номер 
 
 	makeref(itm,Items[n]);
 	itm.id = "SkullAztec";
@@ -2351,7 +2449,7 @@ int InitItems()
 	itm.model = "SkullAztec";
 	itm.picIndex = 16;
 	itm.picTexture = "ITEMS_AZTEC";
-	itm.shown = 1; 
+	itm.shown = 1;
 	itm.startLocation = "Temple_great";
 	itm.startLocator = "item1";
 	itm.price = 100000;
@@ -2368,7 +2466,7 @@ int InitItems()
 	itm.model = "KnifeAztec";
 	itm.picIndex = 11;
 	itm.picTexture = "ITEMS_13";
-	itm.shown = 0; 
+	itm.shown = 0;
 	itm.useLocation = "Tenochtitlan";
 	itm.useLocator = "button01";
 	itm.price = 25000;
@@ -2378,14 +2476,14 @@ int InitItems()
 	itm.ItemType = "QUESTITEMS";
 	n++;
 
-	ItemsForLocators_end = n; //конечный номер для спец. предметов
+	ItemsForLocators_end = n;
 
 	// <<<< ---------------  QUEST ITEMS  --------------------
 
-    // КАРТЫ //////////////////////////////////////////////////
-    makeref(itm,Items[n]);
-	itm.id = "map_bad";       // to del
-    itm.groupID = MAPS_ITEM_TYPE;
+	///////////////////////////////////////////////////
+	makeref(itm,Items[n]);
+	itm.id = "map_bad";	// to del
+	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_bad";
 	itm.describe = "itmdescr_map_bad";
 	itm.model = "";
@@ -2398,13 +2496,13 @@ int InitItems()
 	itm.imageTga = "map_1";
 	itm.imageType = "cabin_map";
 	// boal 19.01.2004 <--
-    itm.rare = 0.005;
-    itm.ItemType = "MAP";
+	itm.rare = 0.005;
+	itm.ItemType = "MAP";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "map_normal";
-    itm.groupID = MAPS_ITEM_TYPE;
+	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_normal";
 	itm.describe = "itmdescr_map_normal";
 	itm.model = "";
@@ -2420,7 +2518,41 @@ int InitItems()
 	itm.rare = 0.001;
 	itm.ItemType = "MAP";
 	n++;
-	
+
+makeref(itm,Items[n]);
+	itm.id = "Map_Best"; // Warship.
+	itm.groupID = MAPS_ITEM_TYPE;
+	itm.name = "itmname_Map_Best";
+	itm.describe = "itmdescr_Map_Best";
+	itm.model = "";
+	itm.picIndex = 14;
+	itm.picTexture = "ITEMS_9";
+//	itm.shown = 0;
+	itm.price = 30000;
+	// boal 19.01.2004 -->
+	itm.Weight = 0.1;
+	// boal 19.01.2004 <--
+	itm.rare = 0.001;
+
+	makeref(itm,Items[n]);
+	itm.id = "map_good";
+	itm.groupID = MAPS_ITEM_TYPE;
+	itm.name = "itmname_map_good";
+	itm.describe = "itmdescr_map_good";
+	itm.model = "";
+	itm.picIndex = 2;
+	itm.picTexture = "ITEMS_14";
+//	itm.shown = 0;
+	itm.price = 6100;
+	// boal 19.01.2004 -->
+	itm.Weight = 0.1;
+	itm.imageTga = "map_3";
+	itm.imageType = "cabin_map";
+	// boal 19.01.2004 <--
+	itm.rare = 0.0001;
+	itm.ItemType = "MAP";
+	n++;
+
 	// boal 270904 -->
 	makeref(itm,Items[n]);
 	itm.id = "map_bermudas";
@@ -2437,7 +2569,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_jam";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2453,7 +2585,7 @@ int InitItems()
 	itm.MapIsland = "Redmond";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_cayman";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2469,7 +2601,7 @@ int InitItems()
 	itm.MapIsland = "Cayman";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_barbados";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2485,7 +2617,7 @@ int InitItems()
 	itm.MapIsland = "Oxbay";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_TORTUGA";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2501,8 +2633,8 @@ int InitItems()
 	itm.MapIsland = "Oxbay";
 	itm.ItemType = "MAP";
 	n++;
-	
-	makeref(itm,Items[n]);    ////
+
+	makeref(itm,Items[n]);	////
 	itm.id = "map_Curacao";
 	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_Curacao";
@@ -2517,7 +2649,7 @@ int InitItems()
 	itm.MapIsland = "Douwesen";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_martiniqua";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2533,7 +2665,7 @@ int InitItems()
 	itm.MapIsland = "FalaiseDeFleur";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_dominica";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2549,7 +2681,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_trinidad";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2565,7 +2697,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_puerto";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2581,7 +2713,7 @@ int InitItems()
 	itm.MapIsland = "IslaMuelle";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_cuba";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2597,7 +2729,7 @@ int InitItems()
 	itm.MapIsland = "Cuba";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_Pearl";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2613,7 +2745,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_hisp";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2629,7 +2761,7 @@ int InitItems()
 	itm.MapIsland = "Gaity";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_nevis";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2645,7 +2777,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_beliz";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2661,8 +2793,8 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
-	makeref(itm,Items[n]);    /////
+
+	makeref(itm,Items[n]);	/////
 	itm.id = "map_guad";
 	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_guad";
@@ -2677,8 +2809,8 @@ int InitItems()
 	itm.MapIsland = "Guadelupa";
 	itm.ItemType = "MAP";
 	n++;
-	
-	makeref(itm,Items[n]);    /////
+
+	makeref(itm,Items[n]);	/////
 	itm.id = "map_santa";
 	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_santa";
@@ -2693,7 +2825,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_antigua";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2709,7 +2841,7 @@ int InitItems()
 	itm.MapIsland = "Antigua";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_terks";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2725,7 +2857,7 @@ int InitItems()
 	itm.MapIsland = "Terks";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_sm";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2741,7 +2873,7 @@ int InitItems()
 	itm.MapIsland = "Sent";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_maine_1";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2757,7 +2889,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_maine_2";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2773,7 +2905,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_panama";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2789,7 +2921,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_maracaibo";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2805,7 +2937,7 @@ int InitItems()
 	itm.MapIsland = "";
 	itm.ItemType = "MAP";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "map_cumana";
 	itm.groupID = MAPS_ITEM_TYPE;
@@ -2822,9 +2954,9 @@ int InitItems()
 	itm.ItemType = "MAP";
 	n++;
 	// boal 270904 <--
-	
-    // boal карты генератора клада -->
-    makeref(itm,Items[n]);
+
+	// boal  -->
+	makeref(itm,Items[n]);
 	itm.id = "map_full";
 	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_full";
@@ -2835,12 +2967,12 @@ int InitItems()
 	itm.price = 0; // 0 test
 	itm.Weight = 0.4;
 	itm.imageTga = "none";
-	itm.imageType = "MapRead"; // текстовая форма
+	itm.imageType = "MapRead";
 	itm.mapType = "Full";
 	itm.ItemType = "MAP";
 	n++;
-	
-    makeref(itm,Items[n]);
+
+	makeref(itm,Items[n]);
 	itm.id = "map_part1";
 	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_part1";
@@ -2851,12 +2983,12 @@ int InitItems()
 	itm.price = 0;
 	itm.Weight = 0.2;
 	itm.imageTga = "none";
-	itm.imageType = "MapRead"; // текстовая форма
+	itm.imageType = "MapRead";
 	itm.mapType = "Part";
 	itm.ItemType = "MAP";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "map_part2";
 	itm.groupID = MAPS_ITEM_TYPE;
 	itm.name = "itmname_map_part2";
@@ -2867,19 +2999,19 @@ int InitItems()
 	itm.price = 0;
 	itm.Weight = 0.2;
 	itm.imageTga = "none";
-	itm.imageType = "MapRead"; // текстовая форма
+	itm.imageType = "MapRead";
 	itm.mapType = "Part";
 	itm.ItemType = "MAP";
 	n++;
-    // boal карты генератора клада <--
+	// boal  <--
 
 
-    //  ЗАПОЛНЕНИЕ ТРУПОВ
-    ItemDeadStartCount = n;
-    trace("Заполнение трупов с предмета "+ItemDeadStartCount);
-    
-    
-    makeref(itm,Items[n]);
+	//  ���������� ������
+	ItemDeadStartCount = n;
+	trace("Item object StartCount "+ItemDeadStartCount);
+
+
+	makeref(itm,Items[n]);
 	itm.id = STATUE1; //+1
 	itm.name = "itmname_statue1";
 	itm.describe = "itmdescr_statue1";
@@ -2890,15 +3022,15 @@ int InitItems()
 	itm.price = 20;
 	itm.Weight = 35;
 
-    itm.Monster.rare = 0.05;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.001;
 	n++;
-	
-//SPYGLASSES
+
+	//SPYGLASSES
 
 	makeref(itm,Items[n]);
 	itm.id = "spyglass1";
@@ -2911,17 +3043,17 @@ int InitItems()
 	itm.price = 50;
 	itm.Weight = 1;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.15;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.15;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.folder = "items";
 	itm.model = "spyglass4";
-	itm.scope.texture = "eye_BadTub.tga";
+	itm.scope.texture = "eye_BadTub.tga.tx";
 	itm.scope.zoom = 2.5;
 	itm.scope.time_activate = 500;
 	itm.scope.time_update = 150;
@@ -2952,17 +3084,17 @@ int InitItems()
 	itm.price = 300;
 	itm.Weight = 1.5;
 
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.folder = "items";
 	itm.model = "spyglass4";
-	itm.scope.texture = "eye_CommonTub.tga";
+	itm.scope.texture = "eye_CommonTub.tga.tx";
 	itm.scope.zoom = 4.0;
 	itm.scope.time_activate = 500;
 	itm.scope.time_update = 150;
@@ -2993,13 +3125,17 @@ int InitItems()
 	// boal 19.01.2004 -->
 	itm.Weight = 2;
 
-    itm.Solder_o.rare = 0.15;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder_o.rare = 0.15;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
+
+	itm.Warrior.rare = 0.15;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.folder = "items";
 	itm.model = "spyglass4";
-	itm.scope.texture = "eye_GoodTub.tga";
+	itm.scope.texture = "eye_GoodTub.tga.tx";
 	itm.scope.zoom = 7.0;
 	itm.scope.time_activate = 500;
 	itm.scope.time_update = 150;
@@ -3032,11 +3168,15 @@ int InitItems()
 	// boal 19.01.2004 -->
 	itm.Weight = 4;
 
-    itm.Solder_o.rare = 0.05;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
-    // boal 19.01.2004 <--
-	itm.scope.texture = "eye_BestTub.tga";
+	itm.Solder_o.rare = 0.05;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
+
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
+	itm.scope.texture = "eye_BestTub.tga.tx";
 	itm.scope.zoom = 10.0;
 	itm.scope.time_activate = 500;
 	itm.scope.time_update = 150;
@@ -3055,7 +3195,7 @@ int InitItems()
 	itm.rare = 0.01;
 	itm.ItemType = "SUPPORT";
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "spyglass5";
 	itm.groupID = SPYGLASS_ITEM_TYPE;
@@ -3069,11 +3209,15 @@ int InitItems()
 	// boal 19.01.2004 -->
 	itm.Weight = 7;
 
-    itm.Solder_o.rare = 0.0001;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
-    // boal 19.01.2004 <--
-	itm.scope.texture = "eye_BestTub.tga";
+	itm.Solder_o.rare = 0.0001;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
+
+	itm.Warrior.rare = 0.0001;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
+	itm.scope.texture = "eye_BestTub.tga.tx";
 	itm.scope.zoom = 15.0;
 	itm.scope.time_activate = 500;
 	itm.scope.time_update = 150;
@@ -3103,29 +3247,29 @@ int InitItems()
 	itm.picIndex = 7;
 	itm.picTexture = "ITEMS_1";
 //	itm.shown = false;
-    // boal 19.01.2004 -->
+	// boal 19.01.2004 -->
 	itm.price = 100;
 	itm.Weight = 0.8;
 
-    itm.Solder_o.rare = 0.3;
-    itm.Solder_o.min = 2;
-    itm.Solder_o.max = 6;
-    
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 3;
-    
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 4;
- 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 7;
+	itm.Solder_o.rare = 0.3;
+	itm.Solder_o.min = 2;
+	itm.Solder_o.max = 6;
+
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 3;
+
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 4;
+
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 7;
 
   // boal 19.01.2004 <--
 	itm.potion.pic = 21;
-	itm.potion.tex = 0; // battle_interface\useditems1.tga
+	itm.potion.tex = 0; // battle_interface\useditems1.tga.tx
 	itm.potion.health = 40.0;
 	itm.minlevel = 0;
 	itm.rare = 0.3;
@@ -3145,27 +3289,27 @@ int InitItems()
 	itm.price = 250;
 	itm.Weight = 1;
 
-    itm.Solder_o.rare = 0.3;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 3;
+	itm.Solder_o.rare = 0.3;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 3;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 3;
- 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 5;
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 3;
+
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 5;
 
   // boal 19.01.2004 <--
 	itm.potion.pic = 22;
-	itm.potion.tex = 0; // battle_interface\useditems1.tga
+	itm.potion.tex = 0; // battle_interface\useditems1.tga.tx
 	itm.potion.health = 150.0;
-	itm.potion.health.speed = 10; // скорость выпивания
+	itm.potion.health.speed = 10;
 	itm.minlevel = 1;
 	itm.rare = 0.1;
 	itm.SortIndex = 2;
@@ -3184,20 +3328,20 @@ int InitItems()
 	itm.price = 200;
 	itm.Weight = 0.4;
 
-    itm.Solder_o.rare = 0.05;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.05;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.potion.pic = 23;
-	itm.potion.tex = 0; // battle_interface\useditems2.tga
+	itm.potion.tex = 0; // battle_interface\useditems2.tga.tx
 	itm.potion.antidote = true;
 	itm.minlevel = 1;
 	itm.rare = 0.1;
@@ -3216,25 +3360,25 @@ int InitItems()
 	itm.price = 450;
 	itm.Weight = 0.4;
 
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    
-    itm.Solder_o.rare = 0.05;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 3;
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.05;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Solder_o.rare = 0.05;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 3;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-     // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	// boal 19.01.2004 <--
 	itm.potion.pic = 24;
-	itm.potion.tex = 0; // battle_interface\useditems1.tga
+	itm.potion.tex = 0; // battle_interface\useditems1.tga.tx
 	itm.potion.health = 130.0;
 	itm.potion.antidote = true;
 	itm.minlevel = 1;
@@ -3248,7 +3392,7 @@ int InitItems()
 	itm.id = "potionrum";
 	itm.name = "itmname_potionrum";
 	itm.describe = "itmdescr_potionrum";
-    itm.model = "balsam";
+	itm.model = "balsam";
 	itm.picIndex = 3;
 	itm.picTexture = "ITEMS_1";
 //	itm.shown = false;
@@ -3256,20 +3400,20 @@ int InitItems()
 	itm.price = 150;
 	itm.Weight = 2;
 
-    itm.Solder_o.rare = 0.1;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.1;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Solder.rare = 0.2;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.2;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.2;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.2;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.potion.pic = 25;
-	itm.potion.tex = 0; // battle_interface\useditems3.tga
+	itm.potion.tex = 0; // battle_interface\useditems3.tga.tx
 	itm.potion.health = 50.0;
 	itm.potion.antidote = true;
 	itm.minlevel = 1;
@@ -3282,56 +3426,56 @@ int InitItems()
 	itm.id = "potionwine";
 	itm.name = "itmname_potionwine";
 	itm.describe = "itmdescr_potionwine";
-    itm.model = "balsam";
+	itm.model = "balsam";
 	itm.picIndex = 6;
 	itm.picTexture = "ITEMS_1";
 	// boal 19.01.2004 -->
 	itm.price = 500;
 	itm.Weight = 1;
 
-    itm.Solder_o.rare = 0.3;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.3;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.potion.pic = 26;
-	itm.potion.tex = 0; // battle_interface\useditems3.tga
+	itm.potion.tex = 0; // battle_interface\useditems3.tga.tx
 	itm.potion.health = 175.0;
-	itm.potion.health.speed = 7; // скорость выпивания
+	itm.potion.health.speed = 7;
 	itm.minlevel = 1;
 	itm.rare = 0.1;
 	itm.SortIndex = 2;
 	itm.ItemType = "SUPPORT";
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "potion5";
 	itm.name = "itmname_potion5";
 	itm.describe = "itmdescr_potion5";
-    itm.model = "balsam";
+	itm.model = "balsam";
 	itm.picIndex = 12;
 	itm.picTexture = "ITEMS_7";
 	// boal 19.01.2004 -->
 	itm.price = 30;
 	itm.Weight = 0.4;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 9;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 9;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 9;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 9;
+	// boal 19.01.2004 <--
 	itm.potion.pic = 27;
-	itm.potion.tex = 0; // battle_interface\useditems3.tga
+	itm.potion.tex = 0; // battle_interface\useditems3.tga.tx
 	itm.potion.health = 25.0;
 	itm.minlevel = 1;
 	itm.rare = 0.2;
@@ -3349,34 +3493,34 @@ int InitItems()
 	itm.picIndex = 1;
 	itm.picTexture = "ITEMS_2";
 //	itm.shown = false;
-    // boal 19.01.2004 -->
+	// boal 19.01.2004 -->
 	itm.price = 50;
 	itm.Weight = 0.2;
 
-    itm.Solder_o.rare = 0.1; 
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 4;
+	itm.Solder_o.rare = 0.1;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 4;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
-    
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    
-    itm.Citizen.rare = 0.05;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Citizen_f.rare = 0.05;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Citizen.rare = 0.05;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+
+	itm.Citizen_f.rare = 0.05;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
@@ -3393,18 +3537,18 @@ int InitItems()
 	itm.price = 700;
 	itm.Weight = 0.2;
 
-    itm.Solder_o.rare = 0.1;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 4;
+	itm.Solder_o.rare = 0.1;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 4;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
@@ -3421,18 +3565,18 @@ int InitItems()
 	itm.price = 550;
 	itm.Weight = 0.2;
 
-    itm.Solder_o.rare = 0.1;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 4;
+	itm.Solder_o.rare = 0.1;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 4;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
@@ -3449,18 +3593,18 @@ int InitItems()
 	itm.price = 500;
 	itm.Weight = 0.2;
 
-    itm.Solder_o.rare = 0.1;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 4;
+	itm.Solder_o.rare = 0.1;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 4;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
@@ -3477,18 +3621,18 @@ int InitItems()
 	itm.price = 240;
 	itm.Weight = 0.7;
 
-    itm.Solder_o.rare = 0.2;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 4;
+	itm.Solder_o.rare = 0.2;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 4;
 
-    itm.Monster.rare = 0.3;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.3;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 2;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 2;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
@@ -3505,22 +3649,22 @@ int InitItems()
 	itm.price = 100;
 	itm.Weight = 0.1;
 
-    itm.Solder.rare = 0.01;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.01;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.3;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.3;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
@@ -3537,22 +3681,22 @@ int InitItems()
 	itm.price = 200;
 	itm.Weight = 0.1;
 
-    itm.Solder_o.rare = 0.1;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.1;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Monster.rare = 0.05;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
@@ -3568,22 +3712,22 @@ int InitItems()
 	// boal 19.01.2004 -->
 	itm.price = 10;
 	itm.Weight = 0.1;
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    
-    itm.Warrior.rare = 0.15;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Citizen.rare = 0.15;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Warrior.rare = 0.15;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen_f.rare = 0.25;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen.rare = 0.15;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+
+	itm.Citizen_f.rare = 0.25;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.2;
 	n++;
@@ -3600,22 +3744,22 @@ int InitItems()
 	itm.price = 80;
 	itm.Weight = 0.2;
 
-    itm.Solder.rare = 0.01;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.01;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.03;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.03;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.2;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.2;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.2;
 	n++;
@@ -3632,27 +3776,27 @@ int InitItems()
 	itm.price = 170;
 	itm.Weight = 0.1;
 
-    itm.Solder_o.rare = 0.2;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
-    
-    itm.Monster.rare = 0.3;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Solder_o.rare = 0.2;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
+
+	itm.Monster.rare = 0.3;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
 
-    itm.Warrior.rare = 0.02;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.02;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.3;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.3;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.1;
 	n++;
@@ -3669,27 +3813,27 @@ int InitItems()
 	itm.price = 90;
 	itm.Weight = 0.3;
 
-    itm.Solder_o.rare = 0.2;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 5;
+	itm.Solder_o.rare = 0.2;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 5;
 
-    itm.Monster.rare = 0.2;
-    itm.Monster.min = 1;
-    itm.Monster.max = 6;
+	itm.Monster.rare = 0.2;
+	itm.Monster.min = 1;
+	itm.Monster.max = 6;
 
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 6;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 6;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 5;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 5;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 5;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 5;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
@@ -3706,22 +3850,22 @@ int InitItems()
 	itm.price = 40;
 	itm.Weight = 0.1;
 
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 5;
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 5;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 20;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 20;
 
-    itm.Citizen.rare = 0.15;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 15;
+	itm.Citizen.rare = 0.15;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 15;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 5;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 5;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.2;
 	n++;
@@ -3738,22 +3882,22 @@ int InitItems()
 	itm.price = 150;
 	itm.Weight = 0.3;
 
-    itm.Solder_o.rare = 0.05;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.05;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Monster.rare = 0.01;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.01;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 2;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 2;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.1;
 	n++;
@@ -3770,22 +3914,22 @@ int InitItems()
 	itm.price = 200;
 	itm.Weight = 0.1;
 
-    itm.Solder_o.rare = 0.05;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.05;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Monster.rare = 0.01;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.01;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 2;
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 2;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
@@ -3802,22 +3946,22 @@ int InitItems()
 	itm.price = 300;
 	itm.Weight = 0.5;
 
-    itm.Solder_o.rare = 0.01;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.01;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Monster.rare = 0.02;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.02;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
@@ -3834,24 +3978,24 @@ int InitItems()
 	itm.price = 10;
 	itm.Weight = 0.3;
 
-    itm.Monster.rare = 0.01;
-    itm.Monster.min = 1;
-    itm.Monster.max = 4;
+	itm.Monster.rare = 0.01;
+	itm.Monster.min = 1;
+	itm.Monster.max = 4;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 2;
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 2;
 
-    itm.Citizen_f.rare = 0.4;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.4;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 2;
 	itm.rare = 0.05;
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "jewelry17";  // серебро
+	makeref(itm,Items[n]);
+	itm.id = "jewelry17";
 	itm.name = "itmname_jewelry17";
 	itm.describe = "itmdescr_jewelry17";
 	itm.model = "pursel";
@@ -3862,27 +4006,27 @@ int InitItems()
 	itm.price = 110;
 	itm.Weight = 0.5;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 5;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 5;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 3;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 3;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "jewelry18";
 	itm.name = "itmname_jewelry18";
 	itm.describe = "itmdescr_jewelry18";
@@ -3894,28 +4038,28 @@ int InitItems()
 	itm.price = 330;
 	itm.Weight = 0.1;
 
-    itm.Solder_o.rare = 0.2;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.2;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen_f.rare = 0.25;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.25;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 0;
 	itm.rare = 0.1;
 	n++;
 
-    makeref(itm,Items[n]);
-	itm.id = "bullet"; // boal это пуля "mineral1";
+	makeref(itm,Items[n]);
+	itm.id = "bullet"; // boal "mineral1";
 	itm.name = "itmname_bullet"; //"itmname_mineral1";
 	itm.describe = "itmdescr_bullet";//"itmdescr_mineral1";
 	itm.model = "pursel";
@@ -3942,14 +4086,14 @@ int InitItems()
 	itm.price = 300;
 	itm.Weight = 6;
 
-    itm.Solder.rare = 0.01;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.01;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.02;
 	n++;
@@ -3966,20 +4110,20 @@ int InitItems()
 	itm.price = 10;
 	itm.Weight = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 4;
-    
-    // boal 19.01.2004 <--
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 4;
+
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.05;
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "mineral4"; // баклан
+	itm.id = "mineral4";
 	itm.name = "itmname_mineral4";
 	itm.describe = "itmdescr_mineral4";
-	itm.model = "pursel"; // чтоб был виден
+	itm.model = "pursel";
 	itm.picIndex = 9;
 	itm.picTexture = "ITEMS_8";
 //	itm.shown = false;
@@ -3987,27 +4131,27 @@ int InitItems()
 	// boal 19.01.2004 -->
 	itm.Weight = 2;
 
-    itm.Solder.rare = 0.05;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Solder.rare = 0.05;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-    itm.Citizen.rare = 0.05;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Citizen.rare = 0.05;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.05;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "mineral5";
 	itm.name = "itmname_mineral5";
 	itm.describe = "itmdescr_mineral5";
@@ -4019,14 +4163,14 @@ int InitItems()
 	itm.price = 2;
 	itm.Weight = 3;
 
-    itm.Monster.rare = 0.01;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.01;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.02;
 	n++;
@@ -4043,22 +4187,22 @@ int InitItems()
 	itm.price = 20;
 	itm.Weight = 1;
 
-    itm.Solder.rare = 0.001;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.001;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.3;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Monster.rare = 0.3;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-    itm.Warrior.rare = 0.001;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 5;
+	itm.Warrior.rare = 0.001;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 5;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 5;
-    // boal 19.01.2004 <--
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 5;
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.4;
 	n++;
@@ -4075,27 +4219,27 @@ int InitItems()
 	itm.price = 140;
 	itm.Weight = 0.8;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-    itm.Warrior.rare = 0.3;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.3;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.2;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "mineral8";
 	itm.name = "itmname_mineral8";
 	itm.describe = "itmdescr_mineral8";
@@ -4107,18 +4251,18 @@ int InitItems()
 	itm.price = 30;
 	itm.Weight = 1;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel =4;
 	itm.rare = 0.05;
 	n++;
@@ -4135,18 +4279,18 @@ int InitItems()
 	itm.price = 80;
 	itm.Weight = 1;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-    itm.Warrior.rare = 0.2;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.2;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel =2;
 	itm.rare = 0.1;
 	n++;
@@ -4163,18 +4307,18 @@ int InitItems()
 	itm.price = 4;
 	itm.Weight = 1;
 
-    itm.Solder.rare = 0.001;
-    itm.Solder.min = 1;
-    itm.Solder.max = 5;
+	itm.Solder.rare = 0.001;
+	itm.Solder.min = 1;
+	itm.Solder.max = 5;
 
-    itm.Monster.rare = 0.001;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Monster.rare = 0.001;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-    itm.Warrior.rare = 0.001;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 5;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.001;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 5;
+	// boal 19.01.2004 <--
 	itm.minlevel =0;
 	itm.rare = 0.1;
 	n++;
@@ -4193,7 +4337,7 @@ int InitItems()
 	itm.minlevel =5;
 	itm.rare = 0.01;
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "sculMa2";
 	itm.name = "itmname_sculMa2";
@@ -4224,6 +4368,156 @@ int InitItems()
 	itm.rare = 0.01;
 	n++;
 
+	makeref(itm,Items[n]);
+	itm.id = "cat1";  // cat <-----Officerpuppy 02/04/10
+	itm.name = "itmname_cat1";
+	itm.describe = "itmdescr_cat1";
+	itm.model = "";
+	itm.picIndex = 1;
+	itm.picTexture = "ITEMS_14";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 5000;
+	itm.Weight = 1;
+  	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.01;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "CursedCoin";  // Aztec gold <-----Officerpuppy 04/19/10
+	itm.name = "itmname_CursedCoin";
+	itm.describe = "itmdescr_CursedCoin";
+	itm.model = "purse";
+	itm.picIndex = 7;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 1000;
+	itm.Weight = 0.1;
+
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 10;
+	itm.minlevel = 1;
+	itm.rare = 0.05;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Maokun";  // Mao Kun map <-----Officerpuppy 05/09/11
+	itm.name = "itmname_Maokun";
+	itm.describe = "itmdescr_Maokun";
+	itm.model = "";
+	itm.picIndex = 9;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 9000;
+	itm.Weight = 0.2;
+	itm.imageTga = "books\maokun";
+	itm.rare = 0.01;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Voodoo";  // Voodoo doll <-----Officerpuppy 05/09/11
+	itm.name = "itmname_Voodoo";
+	itm.describe = "itmdescr_Voodoo";
+	itm.model = "";
+	itm.picIndex = 10;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 800;
+	itm.Weight = 0.1;
+
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 10;
+	itm.minlevel = 1;
+	itm.rare = 0.05;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Chalices";  // Chalices of Cartagena <-----Officerpuppy 05/09/11
+	itm.name = "itmname_Chalices";
+	itm.describe = "itmdescr_Chalices";
+	itm.model = "";
+	itm.picIndex = 11;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 10000;
+	itm.Weight = 3;
+	itm.minlevel = 1;
+	itm.rare = 0.01;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Cane";  // Cutler Beckett's cane <-----Officerpuppy 06/09/11
+	itm.name = "itmname_Cane";
+	itm.describe = "itmdescr_Cane";
+	itm.model = "";
+	itm.picIndex = 12;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 5000;
+	itm.Weight = 3;
+	itm.minlevel = 1;
+	itm.rare = 0.01;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Keycloth";  // Drawing of the key to the Dead Man's Chest <-----Officerpuppy 06/09/11
+	itm.name = "itmname_Keycloth";
+	itm.describe = "itmdescr_Keycloth";
+	itm.model = "";
+	itm.picIndex = 13;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 2500;
+	itm.Weight = 1;
+	itm.minlevel = 1;
+	itm.rare = 0.01;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Timekeeper";  // Timekeeper  <-----Officerpuppy 06/09/11
+	itm.name = "itmname_Timekeeper";
+	itm.describe = "itmdescr_Timekeeper";
+	itm.model = "";
+	itm.picIndex = 14;
+	itm.picTexture = "ITEMS_14";
+	itm.shown = 0;
+	itm.price = 8500;
+	itm.Weight = 1;
+	itm.minlevel = 1;
+	itm.rare = 0.01;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Pirata";  // Pirata Codex  <-----Officerpuppy 06/09/11
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_Pirata";
+	itm.describe = "itmdescr_Pirata";
+	itm.model = "OpenBook";
+	itm.picIndex = 15;
+	itm.picTexture = "ITEMS_14";
+	itm.price = 8500;
+	itm.Weight = 3;
+	itm.rare = 0.01;
+	itm.imageTga = "books\piratacodex_1";
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "Malleus";  // Malleus Maleficarum  <-----Officerpuppy 06/09/11
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_Malleus";
+	itm.describe = "itmdescr_Malleus";
+	itm.model = "OpenBook";
+	itm.picIndex = 15;
+	itm.picTexture = "ITEMS_14";
+	itm.price = 6500;
+	itm.Weight = 3;
+	itm.rare = 0.01;
+	itm.imageTga = "books\Malleus_1";
+	n++;
+
 //INDIAN TRINKETS
 
 	makeref(itm,Items[n]);
@@ -4235,21 +4529,21 @@ int InitItems()
 	itm.picTexture = "ITEMS_5";
 //	itm.shown = false;
 	// boal 19.01.2004 -->
-	itm.price = 30;
+	itm.price = 300;
 	itm.Weight = 3;
 
-    itm.Solder.rare = 0.001;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.001;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.03;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.03;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.001;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.001;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.005;
 	n++;
@@ -4263,21 +4557,21 @@ int InitItems()
 	itm.picTexture = "ITEMS_5";
 //	itm.shown = false;
 	// boal 19.01.2004 -->
-	itm.price = 40;
+	itm.price = 200;
 	itm.Weight = 1;
 
-    itm.Solder.rare = 0.02;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
+	itm.Solder.rare = 0.02;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
 
-    itm.Monster.rare = 0.03;
-    itm.Monster.min = 1;
-    itm.Monster.max = 3;
+	itm.Monster.rare = 0.03;
+	itm.Monster.min = 1;
+	itm.Monster.max = 3;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
@@ -4294,22 +4588,22 @@ int InitItems()
 	itm.price = 100;
 	itm.Weight = 0.6;
 
-    itm.Monster.rare = 0.05;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
-    
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
+
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
@@ -4326,14 +4620,14 @@ int InitItems()
 	itm.price = 5;
 	itm.Weight = 2;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.2;
 	n++;
@@ -4350,22 +4644,22 @@ int InitItems()
 	itm.price = 130;
 	itm.Weight = 1.5;
 
-    itm.Monster.rare = 0.05;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.03;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.03;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 3;
 	itm.rare = 0.05;
 	n++;
@@ -4382,14 +4676,14 @@ int InitItems()
 	itm.price = 600;
 	itm.Weight = 1;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.001;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    // boal 19.01.2004 <--
+	itm.Warrior.rare = 0.001;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 2;
 	itm.rare = 0.005;
 	n++;
@@ -4406,22 +4700,22 @@ int InitItems()
 	itm.price = 150;
 	itm.Weight = 3.6;
 
-    itm.Monster.rare = 0.07;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.07;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.01;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.01;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.01;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.01;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 4;
 	itm.rare = 0.03;
 	n++;
@@ -4438,22 +4732,22 @@ int InitItems()
 	itm.price = 120;
 	itm.Weight = 0.6;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 4;
 	itm.rare = 0.07;
 	n++;
@@ -4470,23 +4764,23 @@ int InitItems()
 	itm.price = 20;
 	itm.Weight = 1;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.2;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.2;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 5;
 	itm.rare = 0.03;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian11";  // rats god
 	itm.name = "itmname_indian11";
 	itm.describe = "itmdescr_indian11";
@@ -4497,11 +4791,11 @@ int InitItems()
 	// boal 19.01.2004 -->
 	itm.price = 5000;
 	itm.Weight = 1;
-    // boal 19.01.2004 <--
+	// boal 19.01.2004 <--
 	itm.minlevel = 5;
 	itm.rare = 0.001;
 	n++;
-	
+
 	makeref(itm,Items[n]);
 	itm.id = "indian10";
 	itm.name = "itmname_indian10";
@@ -4514,22 +4808,22 @@ int InitItems()
 	itm.price = 210;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
-    // boal 19.01.2004 <--
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 7;
 	itm.rare = 0.03;
 	n++;
@@ -4546,26 +4840,26 @@ int InitItems()
 	itm.price = 1230;
 	itm.Weight = 10;
 
-    itm.Monster.rare = 0.3;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.3;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.1;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.1;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.2;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.2;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
 
-    itm.Solder.rare = 0.001;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.001;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 7;
 	itm.rare = 0.001;
 	n++;
@@ -4582,26 +4876,26 @@ int InitItems()
 	itm.price = 40;
 	itm.Weight = 3;
 
-    itm.Monster.rare = 0.05;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.05;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.1;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.1;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
 
-    itm.Solder.rare = 0.001;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.001;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.1;
 	n++;
@@ -4615,29 +4909,29 @@ int InitItems()
 	itm.picTexture = "ITEMS_5";
 //	itm.shown = false;
 	// boal 19.01.2004 -->
-	itm.price = 110;
+	itm.price = 210;
 	itm.Weight = 3;
 
-    itm.Monster.rare = 0.1;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.1;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.05;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.05;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.2;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.2;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
 
-    itm.Solder.rare = 0.001;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.001;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 10;
 	itm.rare = 0.005;
 	n++;
@@ -4654,10 +4948,10 @@ int InitItems()
 	itm.price = 500;
 	itm.Weight = 30;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 3;
 	itm.rare = 0.005;
 	n++;
@@ -4674,31 +4968,31 @@ int InitItems()
 	itm.price = 15;
 	itm.Weight = 3;
 
-    itm.Monster.rare = 0.001;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.001;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.001;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.001;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.2;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.2;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.2;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
+	itm.Citizen_f.rare = 0.2;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
 
-    itm.Solder.rare = 0.1;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.1;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 3;
 	itm.rare = 0.05;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian17"; // +1 sneak
 	itm.name = "itmname_indian17";
 	itm.describe = "itmdescr_indian17";
@@ -4710,31 +5004,31 @@ int InitItems()
 	itm.price = 50;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.06;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
+	itm.Monster.rare = 0.06;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
 
-    itm.Warrior.rare = 0.02;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
+	itm.Warrior.rare = 0.02;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
 
-    itm.Citizen.rare = 0.01;
-    itm.Citizen.min = 1;
-    itm.Citizen.max = 1;
+	itm.Citizen.rare = 0.01;
+	itm.Citizen.min = 1;
+	itm.Citizen.max = 1;
 
-    itm.Citizen_f.rare = 0.1;
-    itm.Citizen_f.min = 1;
-    itm.Citizen_f.max = 1;
+	itm.Citizen_f.rare = 0.1;
+	itm.Citizen_f.min = 1;
+	itm.Citizen_f.max = 1;
 
-    itm.Solder.rare = 0.01
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    // boal 19.01.2004 <--
+	itm.Solder.rare = 0.01
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.05;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian18";
 	itm.name = "itmname_indian18";
 	itm.describe = "itmdescr_indian18";
@@ -4743,18 +5037,18 @@ int InitItems()
 	itm.picTexture = "ITEMS_7";
 //	itm.shown = false;
 	// boal 19.01.2004 -->
-	itm.price = 75;
+	itm.price = 150;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.001;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian19";
 	itm.name = "itmname_indian19";
 	itm.describe = "itmdescr_indian19";
@@ -4763,18 +5057,18 @@ int InitItems()
 	itm.picTexture = "ITEMS_7";
 //	itm.shown = false;
 	// boal 19.01.2004 -->
-	itm.price = 950;
+	itm.price = 1200;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.001;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian20";
 	itm.name = "itmname_indian20";
 	itm.describe = "itmdescr_indian20";
@@ -4786,15 +5080,15 @@ int InitItems()
 	itm.price = 750;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.001;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian21";
 	itm.name = "itmname_indian21";
 	itm.describe = "itmdescr_indian21";
@@ -4806,15 +5100,15 @@ int InitItems()
 	itm.price = 25;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.001;
 	n++;
 
-    makeref(itm,Items[n]);
+	makeref(itm,Items[n]);
 	itm.id = "indian22";
 	itm.name = "itmname_indian22";
 	itm.describe = "itmdescr_indian22";
@@ -4826,15 +5120,990 @@ int InitItems()
 	itm.price = 5;
 	itm.Weight = 2;
 
-    itm.Monster.rare = 0.005;
-    itm.Monster.min = 1;
-    itm.Monster.max = 1;
-    // boal 19.01.2004 <--
+	itm.Monster.rare = 0.005;
+	itm.Monster.min = 1;
+	itm.Monster.max = 1;
+	// boal 19.01.2004 <--
 	itm.minlevel = 1;
 	itm.rare = 0.001;
 	n++;
 
-    // одежда 07.03.05
+	//books
+
+	makeref(itm,Items[n]);
+	itm.id = "bookleader_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookleader_1";
+	itm.describe = "itmdescr_bookleader_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 9;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookleader_1";
+   	itm.minlevel = 1;
+	itm.rare = 0.03;
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "booklight_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booklight_1";
+	itm.describe = "itmdescr_booklight_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 10;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booklight_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookfencing_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookfencing_1";
+	itm.describe = "itmdescr_bookfencing_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 11;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookfencing_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookheavy_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookheavy_1";
+	itm.describe = "itmdescr_bookheavy_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 12;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookheavy_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookleader_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookleader_2";
+	itm.describe = "itmdescr_bookleader_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 5;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookleader_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "booklight_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booklight_2";
+	itm.describe = "itmdescr_booklight_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 6;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booklight_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookfencing_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookfencing_2";
+	itm.describe = "itmdescr_bookfencing_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 7;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookfencing_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookheavy_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookheavy_2";
+	itm.describe = "itmdescr_bookheavy_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 8;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookheavy_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookleader_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookleader_3";
+	itm.describe = "itmdescr_bookleader_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 1;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookleader_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "booklight_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booklight_3";
+	itm.describe = "itmdescr_booklight_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 2;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booklight_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookfencing_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookfencing_3";
+	itm.describe = "itmdescr_bookfencing_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 3;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookfencing_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookheavy_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookheavy_3";
+	itm.describe = "itmdescr_bookheavy_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 4;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookheavy_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookpistols_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookpistols_1";
+	itm.describe = "itmdescr_bookpistols_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 9;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookpistols_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookluck_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookluck_1";
+	itm.describe = "itmdescr_bookluck_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 10;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookluck_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookstealth_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookstealth_1";
+	itm.describe = "itmdescr_bookstealth_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 11;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookstealth_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "booknavigation_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booknavigation_1";
+	itm.describe = "itmdescr_booknavigation_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 12;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booknavigation_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookpistols_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookpistols_2";
+	itm.describe = "itmdescr_bookpistols_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 5;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookpistols_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookluck_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookluck_2";
+	itm.describe = "itmdescr_bookluck_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 6;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookluck_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookstealth_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookstealth_2";
+	itm.describe = "itmdescr_bookstealth_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 7;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookstealth_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "booknavigation_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booknavigation_2";
+	itm.describe = "itmdescr_booknavigation_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 8;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booknavigation_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookpistols_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookpistols_3";
+	itm.describe = "itmdescr_bookpistols_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 1;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookpistols_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookluck_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookluck_3";
+	itm.describe = "itmdescr_bookluck_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 2;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookluck_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookstealth_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookstealth_3";
+	itm.describe = "itmdescr_bookstealth_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 3;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookstealth_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "booknavigation_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booknavigation_3";
+	itm.describe = "itmdescr_booknavigation_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 4;
+	itm.picTexture = "BOOKS_2";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booknavigation_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookaccurate_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookaccurate_1";
+	itm.describe = "itmdescr_bookaccurate_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 9;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookaccurate_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookcannon_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookcannon_1";
+	itm.describe = "itmdescr_bookcannon_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 10;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookcannon_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookgrapple_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookgrapple_1";
+	itm.describe = "itmdescr_bookgrapple_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 11;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookgrapple_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookdefend_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookdefend_1";
+	itm.describe = "itmdescr_bookdefend_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 12;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookdefend_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookaccurate_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookaccurate_2";
+	itm.describe = "itmdescr_bookaccurate_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 5;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookaccurate_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookcannon_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookcannon_2";
+	itm.describe = "itmdescr_bookcannon_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 6;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookcannon_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookgrapple_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookgrapple_2";
+	itm.describe = "itmdescr_bookgrapple_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 7;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookgrapple_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookdefend_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookdefend_2";
+	itm.describe = "itmdescr_bookdefend_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 8;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookdefend_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookaccurate_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookaccurate_3";
+	itm.describe = "itmdescr_bookaccurate_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 1;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookaccurate_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookcannon_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookcannon_3";
+	itm.describe = "itmdescr_bookcannon_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 2;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookcannon_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookgrapple_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookgrapple_3";
+	itm.describe = "itmdescr_bookgrapple_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 3;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookgrapple_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookdefend_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookdefend_3";
+	itm.describe = "itmdescr_bookdefend_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 4;
+	itm.picTexture = "BOOKS_3";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookdefend_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookrepairs_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookrepairs_1";
+	itm.describe = "itmdescr_bookrepairs_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 9;
+	itm.picTexture = "BOOKS_4";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookrepairs_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookmoney_1";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookmoney_1";
+	itm.describe = "itmdescr_bookmoney_1";
+	itm.model = "OpenBook";
+	itm.picIndex = 10;
+	itm.picTexture = "BOOKS_4";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 2000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookmoney_1";
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+
+	itm.Solder.rare = 0.03;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+	// boal 19.01.2004 <--
+	itm.minlevel = 1;
+	itm.rare = 0.03;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookrepairs_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookrepairs_2";
+	itm.describe = "itmdescr_bookrepairs_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 5;
+	itm.picTexture = "BOOKS_4";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookrepairs_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookmoney_2";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookmoney_2";
+	itm.describe = "itmdescr_bookmoney_2";
+	itm.model = "OpenBook";
+	itm.picIndex = 6;
+	itm.picTexture = "BOOKS_4";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 15000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookmoney_2";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 5;
+	itm.rare = 0.005;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookrepairs_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookrepairs_3";
+	itm.describe = "itmdescr_bookrepairs_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 1;
+	itm.picTexture = "BOOKS_4";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookrepairs_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookmoney_3";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookmoney_3";
+	itm.describe = "itmdescr_bookmoney_3";
+	itm.model = "OpenBook";
+	itm.picIndex = 2;
+	itm.picTexture = "BOOKS_4";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 50000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookmoney_3";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 10;
+	itm.rare = 0.0003;
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "bookwrestling";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookwrestling";
+	itm.describe = "itmdescr_bookwrestling";
+	itm.model = "OpenBook";
+	itm.picIndex = 13;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 75000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookwrestling";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 15;
+	itm.rare = 0.0002;
+	n++;
+
+		makeref(itm,Items[n]);
+	itm.id = "booklgtweapman";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_booklgtweapman";
+	itm.describe = "itmdescr_booklgtweapman";
+	itm.model = "OpenBook";
+	itm.picIndex = 13;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 75000;
+	itm.Weight = 3;
+	itm.imageTga = "books\booklgtweapman";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 15;
+	itm.rare = 0.0002;
+	n++;
+
+		makeref(itm,Items[n]);
+	itm.id = "bookmedweapman";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookmedweapman";
+	itm.describe = "itmdescr_bookmedweapman";
+	itm.model = "OpenBook";
+	itm.picIndex = 13;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 75000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookmedweapman";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 15;
+	itm.rare = 0.0002;
+	n++;
+
+			makeref(itm,Items[n]);
+	itm.id = "bookheavweapman";
+	itm.groupID = MAPS_ITEM_TYPE
+	itm.name = "itmname_bookheavweapman";
+	itm.describe = "itmdescr_bookheavweapman";
+	itm.model = "OpenBook";
+	itm.picIndex = 13;
+	itm.picTexture = "BOOKS_1";
+	//itm.shown = false;
+	// boal 19.01.2004 -->
+	itm.price = 75000;
+	itm.Weight = 3;
+	itm.imageTga = "books\bookheavweapman";
+
+	// boal 19.01.2004 <--
+	itm.minlevel = 15;
+	itm.rare = 0.0002;
+	n++;
+
+	// ������ 07.03.05
 	makeref(itm,Items[n]);
 	itm.id = "suit_1";
 	itm.groupID = CIRASS_ITEM_TYPE;
@@ -4842,14 +6111,14 @@ int InitItems()
 	itm.name = "itmname_suit_1";
 	itm.describe = "itmdescr_suit_1";
 	itm.folder = "items";
-	itm.model = "5";
+	itm.model = "6";
 	itm.picIndex = 4;
 	itm.picTexture = "ITEMS_9";
 	itm.price = 20;
 	itm.Weight = 6;
 	itm.CirassLevel = 0.0;
 	itm.minlevel = 20;
-	itm.rare = 0.001;
+	itm.rare = 0.01;
 	itm.ItemType = "SUPPORT";
 	n++;
 
@@ -4860,14 +6129,14 @@ int InitItems()
 	itm.name = "itmname_suit_2";
 	itm.describe = "itmdescr_suit_2";
 	itm.folder = "items";
-	itm.model = "6";
+	itm.model = "7";
 	itm.picIndex = 16;
 	itm.picTexture = "ITEMS_1";
 	itm.price = 20000;
 	itm.Weight = 8;
 	itm.CirassLevel = 0.0;
 	itm.minlevel = 20;
-	itm.rare = 0.001;
+	itm.rare = 0.01;
 	itm.ItemType = "SUPPORT";
 	n++;
 
@@ -4878,7 +6147,7 @@ int InitItems()
 	itm.name = "itmname_suit_3";
 	itm.describe = "itmdescr_suit_3";
 	itm.folder = "items";
-	itm.model = "7";
+	itm.model = "8";
 	itm.picIndex = 2;
 	itm.picTexture = "ITEMS_1";
 	itm.price = 150000;
@@ -4888,8 +6157,63 @@ int InitItems()
 	itm.rare = 0.001;
 	itm.ItemType = "SUPPORT";
 	n++;
-	// броня
-    makeref(itm,Items[n]);
+
+	makeref(itm,Items[n]);
+	itm.id = "suit_4";// Privateer <-----Officerpuppy 03/02/10
+	itm.groupID = CIRASS_ITEM_TYPE;
+	itm.Clothes = true;
+	itm.name = "itmname_suit_4";
+	itm.describe = "itmdescr_suit_4";
+	itm.folder = "items";
+	itm.model = "6";
+	itm.picIndex = 4;
+	itm.picTexture = "ITEMS_14";
+	itm.price = 20;
+	itm.Weight = 6;
+	itm.CirassLevel = 0.0;
+	itm.minlevel = 5;
+	itm.rare = 0.01;
+	itm.ItemType = "SUPPORT";
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "suit_5";// Capt. <-----Officerpuppy 03/02/10
+	itm.groupID = CIRASS_ITEM_TYPE;
+	itm.Clothes = true;
+	itm.name = "itmname_suit_5";
+	itm.describe = "itmdescr_suit_5";
+	itm.folder = "items";
+	itm.model = "7";
+	itm.picIndex = 5;
+	itm.picTexture = "ITEMS_14";
+	itm.price = 20000;
+	itm.Weight = 7;
+	itm.CirassLevel = 0.0;
+	itm.minlevel = 10;
+	itm.rare = 0.01;
+	itm.ItemType = "SUPPORT";
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "suit_6";// Adm. <-----Officerpuppy 03/02/10
+	itm.groupID = CIRASS_ITEM_TYPE;
+	itm.Clothes = true;
+	itm.name = "itmname_suit_6";
+	itm.describe = "itmdescr_suit_6";
+	itm.folder = "items";
+	itm.model = "8";
+	itm.picIndex = 6;
+	itm.picTexture = "ITEMS_14";
+	itm.price = 150000;
+	itm.Weight = 8;
+	itm.CirassLevel = 0.0;
+	itm.minlevel = 15;
+	itm.rare = 0.01;
+	itm.ItemType = "SUPPORT";
+	n++;
+
+	// �����
+		makeref(itm,Items[n]);
 	itm.id = "cirass1";
 	itm.groupID = CIRASS_ITEM_TYPE;
 	itm.Clothes = false;
@@ -4905,16 +6229,16 @@ int InitItems()
 	itm.CirassLevel = 0.10;
 	// boal 19.01.2004 <--
 	itm.minlevel = 2;
-	itm.rare = 0.01;
+	itm.rare = 0.1;
 
-    itm.Solder.rare = 0.01;
-    itm.Solder.min = 1;
-    itm.Solder.max = 1;
-    
-    itm.Warrior.rare = 0.01;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    itm.ItemType = "SUPPORT";
+	itm.Solder.rare = 0.01;
+	itm.Solder.min = 1;
+	itm.Solder.max = 1;
+
+	itm.Warrior.rare = 0.01;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	itm.ItemType = "SUPPORT";
 	n++;
 
 	makeref(itm,Items[n]);
@@ -4935,41 +6259,17 @@ int InitItems()
 	itm.minlevel = 5;
 	itm.rare = 0.1;
 
-    itm.Solder_o.rare = 0.01;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
+	itm.Solder_o.rare = 0.01;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
 
-    itm.Warrior.rare = 0.005;
-    itm.Warrior.min = 1;
-    itm.Warrior.max = 1;
-    itm.ItemType = "SUPPORT";
+	itm.Warrior.rare = 0.005;
+	itm.Warrior.min = 1;
+	itm.Warrior.max = 1;
+	itm.ItemType = "SUPPORT";
 	n++;
 
 	makeref(itm,Items[n]);
-	itm.id = "cirass4";
-	itm.groupID = CIRASS_ITEM_TYPE;
-	itm.Clothes = false;
-	itm.name = "itmname_cirass4";
-	itm.describe = "itmdescr_cirass4";
-	itm.folder = "items";
-	itm.model = "3";
-	itm.picIndex = 12;
-	itm.picTexture = "ITEMS_8";
-	itm.price = 19000;
-	// boal 19.01.2004 -->
-	itm.Weight = 20;
-	itm.CirassLevel = 0.22;
-	// boal 19.01.2004 <--
-	itm.minlevel = 11;
-	itm.rare = 0.1;
-	
-	itm.Solder_o.rare = 0.003;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
-    itm.ItemType = "SUPPORT";
-	n++;
-
-    makeref(itm,Items[n]);
 	itm.id = "cirass3";
 	itm.groupID = CIRASS_ITEM_TYPE;
 	itm.Clothes = false;
@@ -4987,12 +6287,36 @@ int InitItems()
 	itm.minlevel = 9;
 	itm.rare = 0.1;
 
-    itm.Solder_o.rare = 0.003;
-    itm.Solder_o.min = 1;
-    itm.Solder_o.max = 1;
-    itm.ItemType = "SUPPORT";
-    n++;
-            
+	itm.Solder_o.rare = 0.003;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
+	itm.ItemType = "SUPPORT";
+	n++;
+
+	makeref(itm,Items[n]);
+	itm.id = "cirass4";
+	itm.groupID = CIRASS_ITEM_TYPE;
+	itm.Clothes = false;
+	itm.name = "itmname_cirass4";
+	itm.describe = "itmdescr_cirass4";
+	itm.folder = "items";
+	itm.model = "4";
+	itm.picIndex = 12;
+	itm.picTexture = "ITEMS_8";
+	itm.price = 19000;
+	// boal 19.01.2004 -->
+	itm.Weight = 20;
+	itm.CirassLevel = 0.22;
+	// boal 19.01.2004 <--
+	itm.minlevel = 11;
+	itm.rare = 0.1;
+
+	itm.Solder_o.rare = 0.003;
+	itm.Solder_o.min = 1;
+	itm.Solder_o.max = 1;
+	itm.ItemType = "SUPPORT";
+	n++;
+
 	makeref(itm,Items[n]);
 	itm.id = "cirass5";
 	itm.groupID = CIRASS_ITEM_TYPE;
@@ -5000,7 +6324,7 @@ int InitItems()
 	itm.name = "itmname_cirass5";
 	itm.describe = "itmdescr_cirass5";
 	itm.folder = "items";
-	itm.model = "4";
+	itm.model = "5";
 	itm.picIndex = 10;
 	itm.picTexture = "ITEMS_8";
 	itm.price = 30000;
@@ -5013,9 +6337,6 @@ int InitItems()
 	itm.ItemType = "SUPPORT";
 	n++;
 
-    trace("Всего предметов (размерность массива) "+n);
-	trace("Начальный специальный предмет: " + Items[ItemsForLocators_start].id);
-	trace("Конечный специальный предмет: " + Items[ItemsForLocators_end].id);
 	return n;
 }
 
@@ -5038,184 +6359,277 @@ void InitRandItems()
 
 	makeref(rnditem,RandItems[0]);
 	rnditem.id = POTION;
-	rnditem.maxQuantity = 4;
 
-	
-    makeref(rnditem,RandItems[1]);
-	rnditem.id = "Mineral9";  
-	rnditem.maxQuantity = 2;
+
+	makeref(rnditem,RandItems[1]);
+	rnditem.id = "Mineral9";
 
 	makeref(rnditem,RandItems[2]);
-	rnditem.id = "Mineral10";  
-	rnditem.maxQuantity = 2;
-	
+	rnditem.id = "Mineral10";
+
 	makeref(rnditem,RandItems[3]);
 	rnditem.id = "jewelry16";
-	rnditem.maxQuantity = 15;
-	
+
 	makeref(rnditem,RandItems[4]);
 	rnditem.id = "jewelry1";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[5]);
 	rnditem.id = "jewelry2";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[6]);
 	rnditem.id = "jewelry3";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[7]);
 	rnditem.id = "jewelry5";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[8]);
 	rnditem.id = "jewelry6";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[9]);
 	rnditem.id = "jewelry7";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[10]);
 	rnditem.id = "jewelry10";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[11]);
 	rnditem.id = "jewelry11";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[12]);
 	rnditem.id = "jewelry12";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[13]);
 	rnditem.id = "jewelry13";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[14]);
 	rnditem.id = "potion1";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[15]);
 	rnditem.id = "indian4";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[16]);
 	rnditem.id = "potion1";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[17]);
 	rnditem.id = "potion2";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[18]);
 	rnditem.id = "indian13";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[19]);
 	rnditem.id = "potion3";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[20]);
 	rnditem.id = "potion4";
-	rnditem.maxQuantity = 4;
 
-    // boal -->
+	// boal -->
 	makeref(rnditem,RandItems[21]);
 	rnditem.id = "pistol3";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[22]);
 	rnditem.id = "pistol2";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[23]);
 	rnditem.id = "pistol1";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[24]);
 	rnditem.id = "blade8";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[25]);
 	rnditem.id = "blade7";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[26]);
 	rnditem.id = "blade6";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[27]);
 	rnditem.id = "blade5";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[28]);
 	rnditem.id = "blade4";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[29]);
 	rnditem.id = "blade3";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[30]);
 	rnditem.id = "blade2";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[31]);
 	rnditem.id = "spyglass1";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[32]);
 	rnditem.id = "spyglass2";
-	rnditem.maxQuantity = 1;
 
 	makeref(rnditem,RandItems[33]);
 	rnditem.id = "blade1";
-	rnditem.maxQuantity = 1;
 
-    makeref(rnditem,RandItems[34]);
+	makeref(rnditem,RandItems[34]);
 	rnditem.id = "jewelry17";
-	rnditem.maxQuantity = 4;
 
-    makeref(rnditem,RandItems[35]);
+	makeref(rnditem,RandItems[35]);
 	rnditem.id = "jewelry18";
-	rnditem.maxQuantity = 4;
 
-    makeref(rnditem,RandItems[36]);
+	makeref(rnditem,RandItems[36]);
 	rnditem.id = "bullet"; // boal "Mineral1";
-	rnditem.maxQuantity = 20;
 
 	makeref(rnditem,RandItems[37]);
 	rnditem.id = "mineral3";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[38]);
-	rnditem.id = "Mineral4";  
-	rnditem.maxQuantity = 1;
+	rnditem.id = "Mineral4";
 
-    makeref(rnditem,RandItems[39]);
-	rnditem.id = "Mineral5";  
-	rnditem.maxQuantity = 1;
+	makeref(rnditem,RandItems[39]);
+	rnditem.id = "Mineral5";
 
 	makeref(rnditem,RandItems[40]);
-	rnditem.id = "Mineral6";  
-	rnditem.maxQuantity = 4;
+	rnditem.id = "Mineral6";
 
 	makeref(rnditem,RandItems[41]);
-	rnditem.id = "Mineral7";  
-	rnditem.maxQuantity = 1;
+	rnditem.id = "Mineral7";
 
-    makeref(rnditem,RandItems[42]);
+	makeref(rnditem,RandItems[42]);
 	rnditem.id = "potion5";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[43]);
 	rnditem.id = "potionwine";
-	rnditem.maxQuantity = 4;
 
 	makeref(rnditem,RandItems[44]);
 	rnditem.id = "potionrum";
-	rnditem.maxQuantity = 4;
+
+	makeref(rnditem,RandItems[45]);
+	rnditem.id = "bookleader_1";
+
+	makeref(rnditem,RandItems[46]);
+	rnditem.id = "booklight_1";
+
+	makeref(rnditem,RandItems[47]);
+	rnditem.id = "bookfencing_1";
+
+	makeref(rnditem,RandItems[48]);
+	rnditem.id = "bookheavy_1";
+
+	makeref(rnditem,RandItems[49]);
+	rnditem.id = "bookleader_2";
+
+	makeref(rnditem,RandItems[50]);
+	rnditem.id = "booklight_2";
+
+	makeref(rnditem,RandItems[51]);
+	rnditem.id = "bookfencing_2";
+
+	makeref(rnditem,RandItems[52]);
+	rnditem.id = "bookheavy_2";
+
+	makeref(rnditem,RandItems[53]);
+	rnditem.id = "bookleader_3";
+
+	makeref(rnditem,RandItems[54]);
+	rnditem.id = "booklight_3";
+
+	makeref(rnditem,RandItems[55]);
+	rnditem.id = "bookfencing_3";
+
+	makeref(rnditem,RandItems[56]);
+	rnditem.id = "bookheavy_3";
+
+	makeref(rnditem,RandItems[57]);
+	rnditem.id = "bookpistols_1";
+
+	makeref(rnditem,RandItems[58]);
+	rnditem.id = "bookluck_1";
+
+	makeref(rnditem,RandItems[59]);
+	rnditem.id = "bookstealth_1";
+
+	makeref(rnditem,RandItems[60]);
+	rnditem.id = "booknavigation_1";
+
+	makeref(rnditem,RandItems[61]);
+	rnditem.id = "bookpistols_2";
+
+	makeref(rnditem,RandItems[62]);
+	rnditem.id = "bookluck_2";
+
+	makeref(rnditem,RandItems[63]);
+	rnditem.id = "bookstealth_2";
+
+	makeref(rnditem,RandItems[64]);
+	rnditem.id = "booknavigation_2";
+
+	makeref(rnditem,RandItems[65]);
+	rnditem.id = "bookpistols_3";
+
+	makeref(rnditem,RandItems[66]);
+	rnditem.id = "bookluck_3";
+
+	makeref(rnditem,RandItems[67]);
+	rnditem.id = "bookstealth_3";
+
+	makeref(rnditem,RandItems[68]);
+	rnditem.id = "booknavigation_3";
+
+	makeref(rnditem,RandItems[69]);
+	rnditem.id = "bookaccurate_1";
+
+	makeref(rnditem,RandItems[70]);
+	rnditem.id = "bookcannon_1";
+
+	makeref(rnditem,RandItems[71]);
+	rnditem.id = "bookgrapple_1";
+
+	makeref(rnditem,RandItems[72]);
+	rnditem.id = "bookdefend_1";
+
+	makeref(rnditem,RandItems[73]);
+	rnditem.id = "bookaccurate_2";
+
+	makeref(rnditem,RandItems[74]);
+	rnditem.id = "bookcannon_2";
+
+	makeref(rnditem,RandItems[75]);
+	rnditem.id = "bookgrapple_2";
+
+	makeref(rnditem,RandItems[76]);
+	rnditem.id = "bookdefend_2";
+
+	makeref(rnditem,RandItems[77]);
+	rnditem.id = "bookaccurate_3";
+
+	makeref(rnditem,RandItems[78]);
+	rnditem.id = "bookcannon_3";
+
+	makeref(rnditem,RandItems[79]);
+	rnditem.id = "bookgrapple_3";
+
+	makeref(rnditem,RandItems[80]);
+	rnditem.id = "bookdefend_3";
+
+	makeref(rnditem,RandItems[81]);
+	rnditem.id = "bookrepairs_1";
+
+	makeref(rnditem,RandItems[82]);
+	rnditem.id = "bookmoney_1";
+
+	makeref(rnditem,RandItems[83]);
+	rnditem.id = "bookrepairs_2";
+
+	makeref(rnditem,RandItems[84]);
+	rnditem.id = "bookmoney_2";
+
+	makeref(rnditem,RandItems[85]);
+	rnditem.id = "bookrepairs_3";
+
+	makeref(rnditem,RandItems[86]);
+	rnditem.id = "bookmoney_3";
+
+	makeref(rnditem,RandItems[87]);
+	rnditem.id = "bookwrestling";
+
+	makeref(rnditem,RandItems[88]);
+	rnditem.id = "booklgtweapman";
+
+	makeref(rnditem,RandItems[89]);
+	rnditem.id = "bookmedweapman";
+
+	makeref(rnditem,RandItems[90]);
+	rnditem.id = "bookheavweapman";
 	// boal <--
 }
